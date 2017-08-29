@@ -19,7 +19,7 @@
 
 <div id="wrapper">
 
-    <?php include ("Page/Includes/Menu-Arriba.php"); ?>
+    <?php include("Page/Includes/Menu-Superior.php"); ?>
 
     <div id="page-wrapper">
         <div class="row">

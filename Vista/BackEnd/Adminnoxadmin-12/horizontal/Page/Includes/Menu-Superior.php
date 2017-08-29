@@ -6,12 +6,12 @@
             <!-- Logo container-->
             <div class="logo">
                 <!-- Text Logo -->
-                <!--<a href="index.html" class="logo">-->
+                <!--<a href="Index.php" class="logo">-->
                 <!--Zircos-->
                 <!--</a>-->
                 <!-- Image Logo -->
-                <a href="index.html" class="logo">
-                    <img src="assets/images/LogoLittle.png" alt="" height="45">
+                <a href="Index.php" class="logo">
+                    <img src="assets/images/LogoLittlePet.png" alt="" height="45">
                 </a>
 
             </div>
@@ -119,7 +119,7 @@
                     <li class="has-submenu">
                         <a href="#"><i class="fi-air-play"></i>Dashboard</a>
                         <ul class="submenu">
-                            <li><a href="index.html">Dashboard 1</a></li>
+                            <li><a href="Index.php">Dashboard 1</a></li>
                             <li><a href="dashboard-2.html">Dashboard 2</a></li>
                         </ul>
                     </li>
