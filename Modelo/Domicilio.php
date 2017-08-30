@@ -174,27 +174,27 @@ private $Ciudad_IdCiudad;
         // TODO: Implement buscarForId() method.
     }
 
-    protected static function buscar($query)
+    public static function buscar($query)
     {
         // TODO: Implement buscar() method.
     }
 
-    protected static function getAll()
+    public static function getAll()
     {
         // TODO: Implement getAll() method.
     }
 
-    protected function insertar()
+    public function insertar()
     {
         // TODO: Implement insertar() method.
     }
 
-    protected function editar()
+    public function editar()
     {
         // TODO: Implement editar() method.
     }
 
-    protected function eliminar($id)
+    public function eliminar($id)
     {
         // TODO: Implement eliminar() method.
     }

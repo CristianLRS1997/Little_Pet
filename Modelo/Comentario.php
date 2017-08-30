@@ -156,7 +156,7 @@ class Comentario extends db_abstract_class
             $coment -> sujetoadopcion = $valor['SujetoAdopcion_IdSujetoAdopcion'];
             $coment -> respuesta = $valor['Respuesta'];
             $coment -> usuario = $valor['Usuario_Interesado'];
-            array_push($arrcomentario, $coment);
+
         }
         $tmp->Disconnect();
         return $arrcomentario;
