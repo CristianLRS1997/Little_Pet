@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="shortcut icon" href="assets/images/LogoLittle.png">
+    <link rel="shortcut icon" href="images/LogoLittle.png">
 
     <title>Little Pet</title>
 
@@ -21,7 +21,7 @@
 
 <div id="wrapper">
 
-    <?php include("Pages/Includes/Menu-Header.php"); ?>
+    <?php include("Pages/Includes/Menu-Sesion.php"); ?>
 
 
 </div>
