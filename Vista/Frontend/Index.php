@@ -23,6 +23,10 @@
 
     <?php include("Pages/Includes/Menu-Sesion.php"); ?>
 
+    <?php include("Pages/Includes/Menu-Head.php"); ?>
+
+    <?php include("Pages/Includes/Banner.php"); ?>
+
 
 </div>
 

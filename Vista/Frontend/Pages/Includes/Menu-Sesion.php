@@ -4,11 +4,11 @@
         <div class="container">
             <div class="header_top">
                 <div class="logo">
-                    <a href="Index.php"><img src="images/LogoLittle.png" alt=""/></a>
+                    <a href="Index.php"><img src="images/LogoLittleFrase.png" alt=""/></a>
                 </div>
                 <div class="top_right">
                     <ul>
-                        <li><a href="registration.html">Create Account </a></li>|
+                        <li><a href="registration.html">Registrarse </a></li>|
                         <li><a href="contact.html">Contact</a></li>|
                         <li class="login" >
                             <div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>

@@ -556,7 +556,7 @@
 		//plot graph Dot data
 		var uploadsDot = [[0, 2], [1, 4], [2, 7], [3, 9], [4, 6], [5, 3], [6, 10],[7, 8], [8, 5], [9, 14], [10, 10], [11, 10], [12, 8]];
 		var downloadsDot = [[0, 1], [1, 3], [2, 6], [3, 7], [4, 4], [5, 2], [6, 8],[7, 6], [8, 4], [9, 10], [10, 8], [11, 14], [12, 5]];
-		var plabelsDot = ["Visits", "Pages views"];
+		var plabelsDot = ["Visits", "Page views"];
 		var pcolorsDot = ['#34bd25','#ff4433'];
 		var borderColorDot = '#f5f5f5';
 		var bgColorDot = '#fff';
