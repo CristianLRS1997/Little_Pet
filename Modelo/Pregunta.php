@@ -252,7 +252,7 @@ class Pregunta extends  db_abstract_class
             $this-> sujetoadopcion
         ));
         $this->Disconnect();
-    }
+    } 
 
     public function eliminar($id)
     {
