@@ -1,5 +1,3 @@
-<link rel="shortcut icon" href="assets/images/favicon.ico">
-
 <!-- C3 charts css -->
 <link href="../plugins/c3/c3.min.css" rel="stylesheet" type="text/css"  />
 

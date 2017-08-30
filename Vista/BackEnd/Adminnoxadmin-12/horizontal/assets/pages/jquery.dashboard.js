@@ -476,7 +476,7 @@ jQuery(function($) {
         // Add series
         series: [
           {
-            name: 'Page Views',
+            name: 'Pages Views',
             type: 'line',
             smooth: true,
             symbol:'none',
@@ -494,7 +494,7 @@ jQuery(function($) {
             data: [1545,1343,1445,2675,2878,1789,1745,2343,2445,1675,1878,2789,1545,1343,1445,2675,2878,1789,1745,2343,2445,1675,1878,2789]
           },
           {
-            name: 'Page Views',
+            name: 'Pages Views',
             type: 'line',
             smooth: true,
             symbol:'none',

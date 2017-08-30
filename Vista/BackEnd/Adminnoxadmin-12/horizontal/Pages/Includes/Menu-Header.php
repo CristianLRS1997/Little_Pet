@@ -6,12 +6,12 @@
             <!-- Logo container-->
             <div class="logo">
                 <!-- Text Logo -->
-                <!--<a href="index.html" class="logo">-->
+                <!--<a href="Index.php" class="logo">-->
                 <!--Zircos-->
                 <!--</a>-->
                 <!-- Image Logo -->
-                <a href="index.html" class="logo">
-                    <img src="assets/images/LogoLittle.png" alt="" height="45">
+                <a href="Index.php" class="logo">
+                    <img src="assets/images/LogoLittleFrase.png" alt="" height="50">
                 </a>
 
             </div>
@@ -21,12 +21,7 @@
             <div class="menu-extras">
 
                 <ul class="nav navbar-nav navbar-right pull-right">
-                    <li class="navbar-c-items">
-                        <form role="search" class="navbar-left app-search pull-left hidden-xs">
-                            <input type="text" placeholder="Search..." class="form-control">
-                            <a href=""><i class="fa fa-search"></i></a>
-                        </form>
-                    </li>
+
 
                     <li class="dropdown navbar-c-items">
                         <span class="badge badge-topbar badge-success">4</span>
@@ -119,7 +114,7 @@
                     <li class="has-submenu">
                         <a href="#"><i class="fi-air-play"></i>Dashboard</a>
                         <ul class="submenu">
-                            <li><a href="index.html">Dashboard 1</a></li>
+                            <li><a href="Index.php">Dashboard 1</a></li>
                             <li><a href="dashboard-2.html">Dashboard 2</a></li>
                         </ul>
                     </li>

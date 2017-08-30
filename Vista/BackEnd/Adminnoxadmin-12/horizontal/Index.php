@@ -9,9 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Inicio</title>
+    <link rel="shortcut icon" href="assets/images/LogoLittle.png">
 
-    <?php include ("Page/Includes/Imports.php"); ?>
+    <title>Little Pet</title>
+
+    <?php include("Pages/Includes/Imports.php"); ?>
 
 </head>
 
@@ -19,20 +21,8 @@
 
 <div id="wrapper">
 
-    <?php include ("Page/Includes/Menu-Arriba.php"); ?>
+    <?php include("Pages/Includes/Menu-Header.php"); ?>
 
-    <div id="page-wrapper">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Formulario Uno</h1>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
-
-        Hola Mundo
-
-    </div>
-    <!-- /#page-wrapper -->
 
 </div>
 
