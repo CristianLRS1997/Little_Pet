@@ -20,7 +20,7 @@ class UsuarioController
         }else if ($action == "editar"){
             UsuarioController::editar();
         }else if ($action == "selectUSuario"){
-            pacienteController::selectUsuario();
+           // pacienteController::selectUsuario();
         }
 
     }
