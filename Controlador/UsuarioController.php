@@ -32,15 +32,15 @@ class UsuarioController
             $arrayUsuario['Email'] = $_POST['Email'];
             $arrayUsuario['Celular'] = $_POST['Celular'];
             $arrayUsuario['Contrasena'] = $_POST['Contrasena'];
-            $arrayUsuario['Estado'] = $_POST['Estado'];
+            $arrayUsuario['Estado'] = "Activo";
             $arrayUsuario['Fecha_Nacimiento'] = $_POST['Fecha_Nacimiento'];
-            $arrayUsuario['Foto'] = "Activo";
+            $arrayUsuario['Foto'] = "url";
             $Usuario = new Usuario() =($arrayUsuario);
             $Usuario->insertRow();
-            header("Location: ../Vista/pages/registroPaciente.php?respuesta=correcto");
+            header("Location: ../Vista/BackEnd/horizontal/registroUsuario.php?respuesta=correcto");
         } catch (Exception $e) {
             //var_dump($e);
-            header("Location: ../Vista/pages/registroPaciente.php?respuesta=error");
+            header("Location: ../Vista/BackEnd/horizotal/registroUsuario.php?respuesta=error");
         }
     }
 
