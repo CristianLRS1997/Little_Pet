@@ -11,7 +11,7 @@
                 <!--</a>-->
                 <!-- Image Logo -->
                 <a href="Index.php" class="logo">
-                    <img src="assets/images/LogoLittlePet.png" alt="" height="49">
+                    <img src="assets/images/LogoLittleFrase.png" alt="" height="49">
                 </a>
 
             </div>

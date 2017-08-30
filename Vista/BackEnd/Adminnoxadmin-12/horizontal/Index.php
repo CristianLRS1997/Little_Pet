@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Inicio</title>
+    <title>Little Pet</title>
 
     <?php include ("Page/Includes/Imports.php"); ?>
 
