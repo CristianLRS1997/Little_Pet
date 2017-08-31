@@ -114,11 +114,11 @@
 
 
                     <li class="has-submenu">
-                        <a href="#"><i class="dripicons-home" ></i>Inicio</a>
+                        <a href="../../Adminnoxadmin-12/horizontal/Index.php"><i class="dripicons-home" ></i>INICIO</a>
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#"><i class="fi-paper"></i>Forms</a>
+                        <a href="#"><i class="fi-paper"></i>ADOPTAR</a>
                         <ul class="submenu megamenu">
                             <li>
                                 <ul>
