@@ -20,8 +20,11 @@
 
 <body>
 
+<header id="topnav">
 
-<?php include("Pages/Includes/Menu-Header.php"); ?>
+    <?php include("Pages/Includes/Menu-Header.php"); ?>
+
+</header>
 
 <div class="wrapper">
     <div class="container">
