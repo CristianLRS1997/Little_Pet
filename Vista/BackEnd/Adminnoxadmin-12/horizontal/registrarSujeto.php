@@ -74,7 +74,7 @@
 
                     <div class="form-group row">
                         <div class="col-xs-6">
-                         //   <?php echo UsuarioController::; ?>
+
                         </div>
                     </div>
                     <div class="form-group row">
