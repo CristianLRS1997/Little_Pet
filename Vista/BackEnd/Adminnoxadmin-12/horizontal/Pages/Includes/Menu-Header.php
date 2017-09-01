@@ -1,5 +1,5 @@
 <!-- Navigation Bar-->
-<header id="topnav">
+
     <div class="topbar-main">
         <div class="container">
 
@@ -106,7 +106,7 @@
     <!-- end topbar-main -->
 
     <div class="navbar-custom">
-        <div class="container">
+        <div class="container" >
             <div id="navigation">
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu">
@@ -144,27 +144,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#"><i class="fi-paper-stack"></i>Pages</a>
-                        <ul class="submenu megamenu">
-                            <li>
-                                <ul>
-                                    <li><a href="page-starter.html">Starter Page</a></li>
-                                    <li><a href="page-login.html">Login</a></li>
-                                    <li><a href="page-register.html">Register</a></li>
-                                    <li><a href="page-logout.html">Logout</a></li>
-                                    <li><a href="page-recoverpw.html">Recover Password</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul>
-                                    <li><a href="page-lock-screen.html">Lock Screen</a></li>
-                                    <li><a href="page-confirm-mail.html">Confirm Mail</a></li>
-                                    <li><a href="page-404.html">Error 404</a></li>
-                                    <li><a href="page-404-alt.html">Error 404-alt</a></li>
-                                    <li><a href="page-500.html">Error 500</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <a href="../../Adminnoxadmin-12/horizontal/registrarSujeto.php"><i class="fi-paper-stack"></i>DAR EN ADOPCÍON</a>
                     </li>
 
                     <li class="has-submenu">
@@ -182,17 +162,7 @@
                                     <li><a href="extras-maintenance.html">Maintenance</a></li>
                                 </ul>
                             </li>
-                            <li>
-                                <ul>
-                                    <li><a href="extras-coming-soon.html">Coming Soon</a></li>
-                                    <li><a href="extras-faq.html">FAQ</a></li>
-                                    <li><a href="extras-pricing.html">Pricing</a></li>
-                                    <li><a href="extras-profile.html">Profile</a></li>
-                                    <li><a href="extras-email-template.html">Email Templates</a></li>
-                                    <li><a href="extras-search-result.html">Search Results</a></li>
-                                    <li><a href="extras-sitemap.html">Site Map</a></li>
-                                </ul>
-                            </li>
+
                         </ul>
                     </li>
 
@@ -201,5 +171,5 @@
             </div> <!-- end #navigation -->
         </div> <!-- end container -->
     </div> <!-- end navbar-custom -->
-</header>
+
 <!-- End Navigation Bar-->
