@@ -21,46 +21,7 @@
         this.$todoBtn = $("#todo-btn-submit"),
 
         this.$todoData = [
-        {
-            'id': '1',
-            'text': 'Design One page theme',
-            'done': false
-        },
-        {
-            'id': '2',
-            'text': 'Build a js based app',
-            'done': true
-        },
-        {
-            'id': '3',
-            'text': 'Creating component page',
-            'done': true
-        },
-        {
-            'id': '4',
-            'text': 'Testing??',
-            'done': true
-        },
-        {
-            'id': '5',
-            'text': 'Hehe!! This is looks cool!',
-            'done': false
-        },
-        {
-            'id': '6',
-            'text': 'Build an angular app',
-            'done': false
-        },
-        {
-            'id': '7',
-            'text': 'Schedule meeting with Bob',
-            'done': false
-        },
-        {
-            'id': '8',
-            'text': 'Discuss task requirements',
-            'done': false
-        }];
+       ];
 
         this.$todoCompletedData = [];
         this.$todoUnCompletedData = [];
@@ -106,10 +67,10 @@
             //geretaing html
             var todoItem = this.$todoData[count];
             if(todoItem.done == true)
-                this.$todoList.prepend('<li class="list-group-item"><div class="checkbox checkbox-primary"><input class="todo-done" id="' + todoItem.id + '" type="checkbox" checked><label for="' + todoItem.id + '">' + todoItem.text + '</label></div></li>');
+                this.$todoList.prepend('<li class="list-group-item"><div class="checkbox checkbox-warning"><input class="todo-done" id="' + todoItem.id + '" type="checkbox" checked><label for="' + todoItem.id + '">' + todoItem.text + '</label></div></li>');
             else {
                 remaining = remaining + 1;
-                this.$todoList.prepend('<li class="list-group-item"><div class="checkbox checkbox-primary"><input class="todo-done" id="' + todoItem.id + '" type="checkbox"><label for="' + todoItem.id + '">' + todoItem.text + '</label></div></li>');
+                this.$todoList.prepend('<li class="list-group-item"><div class="checkbox checkbox-warning"><input class="todo-done" id="' + todoItem.id + '" type="checkbox"><label for="' + todoItem.id + '">' + todoItem.text + '</label></div></li>');
             }
         }
 
@@ -144,7 +105,7 @@
         //binding the new todo button
         this.$todoBtn.on("click", function() {
             if ($this.$todoInput.val() == "" || typeof($this.$todoInput.val()) == 'undefined' || $this.$todoInput.val() == null) {
-                sweetAlert("Oops...", "You forgot to enter todo text", "error");
+                sweetAlert("Oops...", "Has olvidado introducir todo el texto.", "error");
                 $this.$todoInput.focus();
             } else {
                 $this.addTodo($this.$todoInput.val());
