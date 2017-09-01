@@ -50,11 +50,11 @@
 
                                     <div class="form-group m-b-20">
                                         <div class="col-xs-12">
-                                            
+
                                             <label for="password">Contraseña</label>
                                             <input class="form-control" type="password" required="" id="password" placeholder="Enter your password">
                                         </div>
-                                    </div>
+                    a                </div>
 
 
 

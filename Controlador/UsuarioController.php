@@ -24,23 +24,46 @@ class UsuarioController
         }
 
     }
-    static public function crear (){
+    static public function crear(){
         try {
             $arrayUsuario = array();
             $arrayUsuario['Nombres'] = $_POST['Nombres'];
             $arrayUsuario['Apellidos'] = $_POST['Apellidos'];
             $arrayUsuario['Email'] = $_POST['Email'];
-            $arrayUsuario['Celular'] = $_POST['Celular'];
+            $arrayUsuario['Celular'] = 0;
+            $arrayUsuario['Contrasena'] = $_POST['Contrasena'];
+
+            $arrayUsuario['Estado'] = "Activo";
+            $arrayUsuario['Fecha_Nacimiento'] = "0000-00-00";
+            $arrayUsuario['Foto'] = "Sin Registro";
+            $Usuario = new Usuario($arrayUsuario);
+            $Usuario->insertar();
+            header("Location: ../Vista/BackEnd/Adminnoxadmin-12/horizontal/registroUsuario.php?respuesta=correcto");
+
+        } catch (Exception $e) {
+
+            var_dump($e);
+            //header("Location: ../Vista/BackEnd/Adminnoxadmin-12/horizontal/registroUsuario.php?respuesta=error");
+        }
+    }
+
+    static public function editar (){
+        try {
+            $arrayUsuario = array();
+            $arrayUsuario['Nombres'] = $_POST['Nombres'];
+            $arrayUsuario['Apellidos'] = $_POST['Apellidos'];
+            $arrayUsuario['Email'] = $_POST['Email'];
             $arrayUsuario['Contrasena'] = $_POST['Contrasena'];
             $arrayUsuario['Estado'] = "Activo";
             $arrayUsuario['Fecha_Nacimiento'] = $_POST['Fecha_Nacimiento'];
             $arrayUsuario['Foto'] = "url";
-            $Usuario = new Usuario() =($arrayUsuario);
-            $Usuario->insertRow();
-            header("Location: ../Vista/BackEnd/horizontal/registroUsuario.php?respuesta=correcto");
+            $arrayUsuario['IdUsuario'] = $_POST['IdUsuario'];
+            $Usuario = new Usuario($arrayUsuario) ;
+            $Usuario ->editar();
+            header("Location: ../Vista/pages/registroUsuario.php?respuesta=correcto");
         } catch (Exception $e) {
-            //var_dump($e);
-            header("Location: ../Vista/BackEnd/horizotal/registroUsuario.php?respuesta=error");
+            $txtMensaje = $e->getMessage();
+            header("Location: ../Vista/pages/registroUsuario.php?respuesta=error&Mensaje=".$txtMensaje);
         }
     }
 

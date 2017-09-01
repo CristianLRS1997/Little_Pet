@@ -75,7 +75,11 @@
 
                     <div class="form-group row">
                         <div class="col-xs-6">
+<<<<<<< HEAD
+
+=======
                         //Aqui va la persona
+>>>>>>> 46353287f0b768a45008452f18ae69b6f0cb001f
                         </div>
                     </div>
                     <div class="form-group row">
