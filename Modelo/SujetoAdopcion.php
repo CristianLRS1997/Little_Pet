@@ -14,7 +14,8 @@ class SujetoAdopcion extends db_abstract_class
 
     private $IdSujetoAdopcion;
     private $Genero;
-    private $Edad;
+    private $Anos;
+    private $Meses;
     private $Nombre;
     private $Tamano;
     private $Esterilizado;
@@ -37,7 +38,8 @@ class SujetoAdopcion extends db_abstract_class
         }else {
             $this->IdSujetoAdopcion = "";
             $this->Genero = "";
-            $this->Edad = "";
+            $this->Anos = "";
+            $this->Meses = "";
             $this->Nombre = "";
             $this->Tamano = "";
             $this->Esterilizado = "";
@@ -92,18 +94,35 @@ class SujetoAdopcion extends db_abstract_class
     /**
      * @return string
      */
-    public function getEdad()
+    public function getAnos()
     {
-        return $this->Edad;
+        return $this->Anos;
     }
 
     /**
-     * @param string $Edad
+     * @param string $Anos
      */
-    public function setEdad($Edad)
+    public function setAnos($Anos)
     {
-        $this->Edad = $Edad;
+        $this->Anos = $Anos;
     }
+
+    /**
+     * @return string
+     */
+    public function getMeses()
+    {
+        return $this->Meses;
+    }
+
+    /**
+     * @param string $Meses
+     */
+    public function setMeses($Meses)
+    {
+        $this->Meses = $Meses;
+    }
+
 
     /**
      * @return string
@@ -284,7 +303,26 @@ class SujetoAdopcion extends db_abstract_class
 
     public function insertar()
     {
-        // TODO: Implement insertar() method.
+        $this->insertRow("INSERT INTO littlepet.sujetoadopcion VALUES ('NULL', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", array(
+                $this->Genero,
+                $this->Anos,
+                $this->Meses,
+                $this->Nombre,
+                $this->Tamano,
+                $this->Esterilizado,
+                $this->Vacunas,
+                $this->Descripcion,
+                $this->Dueno,
+                $this->Raza,
+                $this->Ciudad,
+                $this->Alimentacion,
+                $this->Estado
+
+
+            )
+        );
+        $this->Disconnect();
+
     }
 
     public function editar()

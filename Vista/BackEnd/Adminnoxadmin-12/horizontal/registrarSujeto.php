@@ -35,47 +35,46 @@
                     consiga el hogar que merece con calor de familia.
                 </p>
 
-                <form role="form">
+                <form role="form" method="post" action="../../../../Controlador/sujetoAdopcionController.php?action=crear">
                     <div class="row">
                         <div class="col-xs-6 ">
-
-                            <input type="email" required parsley-type="email" class="form-control"
-                                   id="inputEmail3" placeholder="Email">
+                            <input type="text" id="Nombre" name="Nombre" class="form-control" required
+                                   data-parsley-minlength="2" placeholder="Nombre de la mascota"/>
                         </div>
                         <div class="col-xs-6">
-                            <select id="heard" class="form-control" required="">
-                                <option value="">Genéro del Animal</option>
-                                <option value="macho">Macho</option>
-                                <option value="hembra">Hembra</option>
+                            <select required="" id="Genero" name="Genero" class="form-control" >
+                                <option>Genéro del Animal</option>
+                                <option value="Macho">Macho</option>
+                                <option value="Hembra">Hembra</option>
                             </select>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-xs-6 col-md-3">
-                            <input type="email" required parsley-type="email" class="form-control"
-                                   id="inputEmail3" placeholder="Email">
+                            <input type="number" id="Ano" name="Ano" class="form-control" required
+                                   data-parsley-minlength="1" placeholder="Años"/>
                         </div>
                         <div class="col-xs-6 col-md-3">
-                            <input type="email" required parsley-type="email" class="form-control"
-                                   id="inputEmail3" placeholder="Email">
+                            <input type="number" id="Meses" name="Meses" class="form-control" required
+                                   data-parsley-minlength="1" placeholder="Meses"/>
                         </div>
 
                         <div class="col-xs-6">
-                            <input type="email" required parsley-type="email" class="form-control"
-                                   id="inputEmail3" placeholder="Email">
+                            <select required="" id="Tamano" name="Tamano" class="form-control" >
+                                <option>Tamaño</option>
+                                <option value="Grande">Grande</option>
+                                <option value="Mediano">Mediano</option>
+                                <option value="Pequeño">Pequeño</option>
+                                <option value="Mini">Mini</option>
+                            </select>
                         </div>
                     </div>
 
 
                     <div class="form-group row">
-                        <div class="col-sm-8 col-sm-offset-4">
-                            <div class="checkbox checkbox-purple">
-                                <input id="checkbox6" type="checkbox">
-                                <label for="checkbox6">
-                                    Remember me
-                                </label>
-                            </div>
+                        <div class="col-xs-6">
+                         //   <?php echo UsuarioController::; ?>
                         </div>
                     </div>
                     <div class="form-group row">

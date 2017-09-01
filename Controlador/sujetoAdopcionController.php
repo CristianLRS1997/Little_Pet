@@ -22,7 +22,8 @@ class sujetoAdopcionController
         try {
             $arraySujetoAdopcion = array();
             $arraySujetoAdopcion['Genero'] = $_POST['Genero'];
-            $arraySujetoAdopcion['Edad'] = $_POST['Edad'];
+            $arraySujetoAdopcion['Anos'] = $_POST['Anos'];
+            $arraySujetoAdopcion['Meses'] = $_POST['Meses'];
             $arraySujetoAdopcion['Nombre'] = $_POST['Nombre'];
             $arraySujetoAdopcion['Tamano'] = $_POST['Tamano'];
             $arraySujetoAdopcion['Esterilizado'] = $_POST['Esterilizado'];
@@ -35,7 +36,7 @@ class sujetoAdopcionController
             $arraySujetoAdopcion['Estado'] = $_POST['Estado'];
             $sujetoAdopcion = new SujetoAdopcion ($arraySujetoAdopcion);
             $sujetoAdopcion->insertar();
-            header("Location: ../Vista/pages/registroPaciente.php?respuesta=correcto");
+            header("Location: ../../../../horizontal/registroEspecialista.php?respuesta=correcto");
         } catch (Exception $e) {
             var_dump($e);
             // header("Location: ../Vista/pages/registroPaciente.php?respuesta=error");
