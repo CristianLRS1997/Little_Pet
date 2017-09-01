@@ -19,12 +19,13 @@
 
 <body>
 
-<div id="wrapper">
+<header id="topnav">
 
     <?php include("Pages/Includes/Menu-Header.php"); ?>
 
+</header>
 
-</div>
+
 
 
 
