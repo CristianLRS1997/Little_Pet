@@ -8,14 +8,14 @@ require_once('db_abstract_class.php');
  */
 class Pregunta extends  db_abstract_class
 {
-    private  $idpregunta;
-    private $enunciado ;
-    private $rta1;
-    private $rta2;
-    private $rta3;
-    private $rta4;
-    private $estado ;
-    private $sujetoadopcion ;
+    private  $IdPregunta;
+    private $Enunciado ;
+    private $Respuesta1;
+    private $Respuesta2;
+    private $Respuesta3;
+    private $Respuesta4;
+    private $Estado ;
+    private $SujetoAdopcion ;
 
 
 
@@ -27,14 +27,14 @@ class Pregunta extends  db_abstract_class
                 $this->$campo = $valor;
             }
         }else{
-        $this->idpregunta = "";
-        $this->enunciado = "";
-        $this->rta1 = "";
-        $this->rta2 = "";
-        $this->rta3 = "";
-        $this->rta4 = "";
-        $this->estado = "";
-        $this->sujetoadopcion = "";
+        $this->IdPregunta = "";
+        $this->Enunciado = "";
+        $this->Respuesta1 = "";
+        $this->Respuesta2 = "";
+        $this->Respuesta3 = "";
+        $this->Respuesta4 = "";
+        $this->Estado = "";
+        $this->SujetoAdopcion = "";
     }
     }
     /* Metodo destructor cierra la conexion. */
@@ -48,7 +48,7 @@ class Pregunta extends  db_abstract_class
      */
     public function getIdpregunta()
     {
-        return $this->idpregunta;
+        return $this->IdPregunta;
     }
 
     /**
@@ -56,7 +56,7 @@ class Pregunta extends  db_abstract_class
      */
     public function setIdpregunta($idpregunta)
     {
-        $this->idpregunta = $idpregunta;
+        $this->IdPregunta = IdPregunta;
     }
 
     /**
@@ -64,79 +64,79 @@ class Pregunta extends  db_abstract_class
      */
     public function getEnunciado()
     {
-        return $this->enunciado;
+        return $this->Enunciado;
     }
 
     /**
-     * @param string $enunciado
+     * @param string $Enunciado
      */
-    public function setEnunciado($enunciado)
+    public function setEnunciado($Enunciado)
     {
-        $this->enunciado = $enunciado;
-    }
-
-    /**
-     * @return string
-     */
-    public function getRta1()
-    {
-        return $this->rta1;
-    }
-
-    /**
-     * @param string $rta1
-     */
-    public function setRta1($rta1)
-    {
-        $this->rta1 = $rta1;
+        $this->Enunciado = $Enunciado;
     }
 
     /**
      * @return string
      */
-    public function getRta2()
+    public function getRespuesta1()
     {
-        return $this->rta2;
+        return $this->Respuesta1;
     }
 
     /**
-     * @param string $rta2
+     * @param string $Respuesta1
      */
-    public function setRta2($rta2)
+    public function setRespuesta1($Respuesta1)
     {
-        $this->rta2 = $rta2;
-    }
-
-    /**
-     * @return string
-     */
-    public function getRta3()
-    {
-        return $this->rta3;
-    }
-
-    /**
-     * @param string $rta3
-     */
-    public function setRta3($rta3)
-    {
-        $this->rta3 = $rta3;
+        $this->Respuesta1 = $Respuesta1;
     }
 
     /**
      * @return string
      */
-    public function getRta4()
+    public function getRespuesta2()
     {
-        return $this->rta4;
+        return $this->Respuesta2;
     }
 
     /**
-     * @param string $rta4
+     * @param string $Respuesta2
      */
-    public function setRta4($rta4)
+    public function setRespuesta2($Respuesta2)
     {
-        $this->rta4 = $rta4;
+        $this->Respuesta2 = $Respuesta2;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRespuesta3()
+    {
+        return $this->Respuesta3;
+    }
+
+    /**
+     * @param string $Respuesta3
+     */
+    public function setRespuesta3($Respuesta3)
+    {
+        $this->Respuesta3 = $Respuesta3;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRespuesta4()
+    {
+        return $this->Respuesta4;
+    }
+
+    /**
+     * @param string $Respuesta4
+     */
+    public function setRespuesta4($Respuesta4)
+    {
+        $this->Respuesta4 = $Respuesta4;
     }
 
     /**
@@ -144,31 +144,31 @@ class Pregunta extends  db_abstract_class
      */
     public function getEstado()
     {
-        return $this->estado;
+        return $this->Estado;
     }
 
     /**
-     * @param string $estado
+     * @param string $Estado
      */
-    public function setEstado($estado)
+    public function setEstado($Estado)
     {
-        $this->estado = $estado;
+        $this->Estado = $Estado;
     }
 
     /**
      * @return string
      */
-    public function getSujetoadopcion()
+    public function getSujetoAdopcion()
     {
-        return $this->sujetoadopcion;
+        return $this->SujetoAdopcion;
     }
 
     /**
-     * @param string $sujetoadopcion
+     * @param string $SujetoAdopcion
      */
-    public function setSujetoadopcion($sujetoadopcion)
+    public function setSujetoAdopcion($SujetoAdopcion)
     {
-        $this->sujetoadopcion = $sujetoadopcion;
+        $this->SujetoAdopcion = $SujetoAdopcion;
     }
 
 
@@ -178,14 +178,14 @@ class Pregunta extends  db_abstract_class
 
         if ($id>0){
             $getrow = $preg->getRow("SELECT * FROM  littlepet.pregunta WHERE IdPregunta =?", array($id));
-            $preg -> idpregunta = $getrow['IdPregunta'];
-            $preg -> enunciado = $getrow['Enunciado'];
-            $preg -> rta1 = $getrow['Respuesta1'];
-            $preg -> rta2 = $getrow['Respuesta2'];
-            $preg -> rta3 = $getrow['Respuesta3'];
-            $preg -> rta4 = $getrow['Respuesta4'];
-            $preg -> estado = $getrow['Estado'];
-            $preg -> sujetoadopcion = $getrow['SujetoAdopcion'];
+            $preg -> IdPregunta = $getrow['IdPregunta'];
+            $preg -> Enunciado = $getrow['Enunciado'];
+            $preg -> Respuesta1 = $getrow['Respuesta1'];
+            $preg -> Respuesta2 = $getrow['Respuesta2'];
+            $preg -> Respuesta3 = $getrow['Respuesta3'];
+            $preg -> Respuesta4 = $getrow['Respuesta4'];
+            $preg -> Estado = $getrow['Estado'];
+            $preg -> SujetoAdopcion = $getrow['SujetoAdopcion'];
             $preg->Disconnect();
             return $preg;
 
@@ -205,14 +205,14 @@ class Pregunta extends  db_abstract_class
       foreach ($getrows as $valor){
 
           $preg = new  Pregunta();
-          $preg -> idpregunta = $valor['IdPregunta'];
-          $preg -> enunciado = $valor['Enunciado'];
-          $preg -> rta1 = $valor['Respuesta1'];
-          $preg -> rta2 = $valor['Respuesta2'];
-          $preg -> rta3 = $valor['Respuesta3'];
-          $preg -> rta4 = $valor['Respuesta4'];
-          $preg -> estado = $valor['Estado'];
-          $preg -> sujetoadopcion = $valor['SujetoAdopcion'];
+          $preg -> IdPregunta = $valor['IdPregunta'];
+          $preg -> Enunciado = $valor['Enunciado'];
+          $preg -> Respuesta1 = $valor['Respuesta1'];
+          $preg -> Respuesta2 = $valor['Respuesta2'];
+          $preg -> Respuesta3 = $valor['Respuesta3'];
+          $preg -> Respuesta4 = $valor['Respuesta4'];
+          $preg -> Estado = $valor['Estado'];
+          $preg -> SujetoAdopcion = $valor['SujetoAdopcion'];
           array_push($arrpreg, $preg);
       }
       $tmp->Disconnect();
@@ -227,13 +227,13 @@ class Pregunta extends  db_abstract_class
     public function insertar()
     {
         $this-> insertRow("INSERT INTO littlepet.pregunta VALUES ('NULL',?,?,?,?,?,?,?)",array(
-            $this->enunciado,
-            $this-> rta1,
-            $this -> rta2,
-            $this-> rta3,
-            $this-> rta4,
-            $this-> estado,
-            $this-> sujetoadopcion
+            $this->Enunciado,
+            $this-> Respuesta1,
+            $this -> Respuesta2,
+            $this-> Respuesta3,
+            $this-> Respuesta4,
+            $this-> Estado,
+            $this-> SujetoAdopcion
 
         ));
         $this->Disconnect();
@@ -243,13 +243,13 @@ class Pregunta extends  db_abstract_class
     public function editar()
     {
         $this-> updateRow("UPDATE littlepet.pregunta SET Enunciado = ? ,Respuesta1=? ,Respuesta2=?, Respuesta3=?,Respuesta4=?,Estado=?,SujetoAdopcion=?",array(
-            $this->enunciado,
-            $this-> rta1,
-            $this -> rta2,
-            $this-> rta3,
-            $this-> rta4,
-            $this-> estado,
-            $this-> sujetoadopcion
+            $this->Enunciado,
+            $this-> Respuesta1,
+            $this -> Respuesta2,
+            $this-> Respuesta3,
+            $this-> Respuesta4,
+            $this-> Estado,
+            $this-> SujetoAdopcion
         ));
         $this->Disconnect();
     }

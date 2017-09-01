@@ -28,21 +28,21 @@ class preguntaController
         try {
             $arraypreg = array();
             $arraypreg['Enunciado'] = $_POST['Enunciado'];
-            $arraypreg['Pregunta1'] = "rfdtg";
-            $arraypreg['Pregunta2'] = "edrfgh";
-            $arraypreg['Pregunta3'] = "erdfgh";
-            $arraypreg['Pregunta4'] = "wedrfg";
+            $arraypreg['Pregunta1'] =$_POST['Pregunta1'];
+            $arraypreg['Pregunta2'] = $_POST['Pregunta2'];
+            $arraypreg['Pregunta3'] = $_POST['Pregunta3'];
+            $arraypreg['Pregunta4'] = $_POST['Pregunta4'];
             $arraypreg['Estado'] = "Activo";
-            $arraypreg['SujetoAdopcion'] = "1";
+            $arraypreg['SujetoAdopcion'] = "2";
 
             $pregunta = new Pregunta ($arraypreg);
             $pregunta->insertar();
-            header("Location: ../../../horizontal/Preguntas.php?respuesta=correcto");
+            header("Location: ../../../../horizontal/Preguntas.php?respuesta=correcto");
 
         } catch (Exception $e) {
 
             $txtMensaje = $e->getMessage();
-            header("Location: ../../../horizontal/Preguntas.php?respuesta=error".$txtMensaje);
+            header("Location: ../../../../horizontal/Preguntas.php?respuesta=error".$txtMensaje);
         }
 
 
