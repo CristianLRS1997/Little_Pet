@@ -27,7 +27,7 @@
 <div class="wrapper">
     <div class="container">
 
-        <div class="col-sm-9" >
+        <div class="col-sm-9 center-page">
             <div class="card-box">
                 <h2 class="text-center text-warning">REGISTRA AQUI TU MASCOTA</h2>
                 <p class="text-muted font-14 m-b-20">
@@ -74,16 +74,15 @@
 
                     <div class="form-group row">
                         <div class="col-xs-6">
-                         //   <?php echo UsuarioController::; ?>
+                        //Aqui va la persona
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-8 col-sm-offset-4">
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">
+                            <button type="submit" class="btn btn-success btn-rounded w-md waves-effect waves-light">
                                 Register
                             </button>
-                            <button type="reset"
-                                    class="btn btn-default waves-effect m-l-5">
+                            <button type="reset" class="btn btn-default waves-effect m-l-5">
                                 Cancel
                             </button>
                         </div>
