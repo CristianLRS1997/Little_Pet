@@ -29,7 +29,8 @@
 
         <div class="col-sm-9 center-page">
             <div class="card-box">
-                <h2 class="text-center text-warning">REGISTRA AQUI TU MASCOTA</h2>
+                <h3 class="text-center text-warning">REGISTRA AQUI A TU MASCOTA EN ADOPCIÓN</h3>
+                <br>
                 <p class="text-muted font-14 m-b-20">
                     Llena este simple formulario con los datos de tu amigo que vas a dar en adopción, pronto te llegaran ofertas de adopción para que el
                     consiga el hogar que merece con calor de familia.
@@ -74,7 +75,11 @@
 
                     <div class="form-group row">
                         <div class="col-xs-6">
+<<<<<<< HEAD
+
+=======
                         //Aqui va la persona
+>>>>>>> 46353287f0b768a45008452f18ae69b6f0cb001f
                         </div>
                     </div>
                     <div class="form-group row">
