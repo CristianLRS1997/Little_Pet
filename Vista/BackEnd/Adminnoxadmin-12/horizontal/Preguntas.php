@@ -69,10 +69,11 @@
 
                         <div class="form-group">
                             <div>
-                                <button type="submit" class="btn btn-primary waves-effect waves-light">
-                                    Submit
+                                <button type="submit" class="btn btn-success btn-bordered waves-effect w-md waves-light">
+                                    Siguiente
+
                                 </button>
-                                <button type="reset" class="btn btn-default waves-effect m-l-5">
+                                <button type="reset" class="btn btn-success btn-bordered waves-effect w-md waves-light">
                                     Cancel
                                 </button>
                             </div>

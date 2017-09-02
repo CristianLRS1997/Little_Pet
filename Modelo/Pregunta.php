@@ -226,14 +226,14 @@ class Pregunta extends  db_abstract_class
 
     public function insertar()
     {
-        $this-> insertRow("INSERT INTO littlepet.pregunta VALUES ('NULL',?,?,?,?,?,?,?)",array(
+        $this-> insertRow("INSERT INTO littlepet.pregunta (IdPregunta,Enunciado,Respuesta1,Respuesta2,Respuesta3,Respuesta4,Estado,SujetoAdopcion) VALUES ('NULL',?,?,?,?,?,?,?)",array(
             $this->Enunciado,
             $this-> Respuesta1,
             $this -> Respuesta2,
             $this-> Respuesta3,
             $this-> Respuesta4,
             $this-> Estado,
-            $this-> SujetoAdopcion
+            $this-> SujetoAdopcion,
 
         ));
         $this->Disconnect();
