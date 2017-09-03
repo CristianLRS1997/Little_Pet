@@ -30,34 +30,46 @@
 
         <div class="col-sm-9 center-page">
             <div class="card-box">
-                <h2 class="text-center text-warning"><strong>REGISTRA AQUI A TU MASCOTA EN ADOPCIÓN</strong></h2>
+                <h3 class="text-center text-warning"><strong>REGISTRA AQUI A TU MASCOTA EN ADOPCIÓN</strong></h3>
                 <br>
                 <p class="font-15 m-b-20" align="justify">
-                    Llena este simple formulario con los datos de tu amigo que vas a dar en adopción, pronto te llegaran
-                    ofertas de adopción para que el consiga el hogar que merece con calor de familia.
+                    A continuación tendras 3 simples tips para el registro de la mascota que vas a dar enadopción, solo
+                    sigue los pasos para que la posible adopción sea mas efectiva y encuentre el mejor hogar posible. Lee
+                    detenidamente los tips que te mostramos acontinución:
                 </p>
 
                 <br>
 
                 <p align="justify" style="color: #F49719"  class="font-18">
-                    <img class="icon-colored" src="assets/images/icons/compact_camera.svg" title="compact_camera.svg" align="left"/>
+                    <img class="icon-colored" src="assets/images/icons/compact_camera.svg" align="left"/>
 
                     <strong>Toma las fotos claras, que esten enfocadas con luz y tomale los mejores angulos de tu mascota
-                      esto ayudara a que se vea lo hermoso que es para que nuestros padrinos opten lo mas rapido posible
-                      para adoptar a ese adorable amigo.
+                      esto ayudara a que se vea lo hermoso que es para que nuestros padrinos opten por la adopción ese
+                      adorable amigo lo mas rapido posible.
                     </strong>
                 </p>
 
                 <br>
 
                 <p align="justify" style="color: #F49719" class="font-18">
-                    <img class="icon-colored" src="assets/images/icons/ok.svg" title="ok.svg" align="left"/>
+                    <img class="icon-colored" src="assets/images/icons/ok.svg"  align="left"/>
+
+                    <strong>
+                    </strong>
+                </p>
+
+                <br>
+
+                <p align="justify" style="color: #F49719" class="font-18">
+                    <img class="icon-colored" src="assets/images/icons/inspection.svg" align="left"/>
 
                     <strong>Toma las fotos claras, que esten enfocadas con luz y tomale los mejores angulos de tu mascota
                         esto ayudara a que se vea lo hermoso que es para que nuestros padrinos opten lo mas rapido posible
                         para adoptar a ese adorable amigo.
                     </strong>
                 </p>
+
+
 
 
 

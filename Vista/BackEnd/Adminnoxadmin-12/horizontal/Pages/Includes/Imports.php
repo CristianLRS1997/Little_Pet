@@ -82,3 +82,33 @@ link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <!-- App js -->
 <script src="assets/js/jquery.core.js"></script>
 <script src="assets/js/jquery.app.js"></script>
+
+<!-- jQuery  -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/waves.js"></script>
+<script src="assets/js/jquery.slimscroll.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+
+<!-- Parsley js -->
+<script type="text/javascript" src="../plugins/parsleyjs/parsley.min.js"></script>
+
+<!-- App js -->
+<script src="assets/js/jquery.core.js"></script>
+<script src="assets/js/jquery.app.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('form').parsley();
+    });
+    $(function () {
+        $('#demo-form').parsley().on('field:validated', function () {
+            var ok = $('.parsley-error').length === 0;
+            $('.alert-info').toggleClass('hidden', !ok);
+            $('.alert-warning').toggleClass('hidden', ok);
+        })
+            .on('form:submit', function () {
+                return false; // Don't submit form for this demo
+            });
+    });
+</script>
