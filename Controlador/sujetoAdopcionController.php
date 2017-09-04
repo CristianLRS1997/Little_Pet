@@ -26,17 +26,17 @@ class sujetoAdopcionController
             $arraySujetoAdopcion['Meses'] = $_POST['Meses'];
             $arraySujetoAdopcion['Nombre'] = $_POST['Nombre'];
             $arraySujetoAdopcion['Tamano'] = $_POST['Tamano'];
-            $arraySujetoAdopcion['Esterilizado'] = $_POST['Esterilizado'];
-            $arraySujetoAdopcion['Vacunas'] = $_POST['Vacunas'];
+            $arraySujetoAdopcion['Esterilizado'] = "Si";
+            $arraySujetoAdopcion['Vacunas'] = "Si";
             $arraySujetoAdopcion['Descripcion'] = $_POST['Descripcion'];
-            $arraySujetoAdopcion['Dueno'] = $_POST['Dueno'];
-            $arraySujetoAdopcion['Raza'] = $_POST['Raza'];
-            $arraySujetoAdopcion['Ciudad'] = $_POST['Ciudad'];
+            $arraySujetoAdopcion['Dueno'] = "1";
+            $arraySujetoAdopcion['Raza'] = "1";
+            $arraySujetoAdopcion['Ciudad'] = "1";
             $arraySujetoAdopcion['Alimentacion'] = $_POST['Alimentacion'];
-            $arraySujetoAdopcion['Estado'] = $_POST['Estado'];
+            $arraySujetoAdopcion['Estado'] ="Activo";
             $sujetoAdopcion = new SujetoAdopcion ($arraySujetoAdopcion);
             $sujetoAdopcion->insertar();
-            header("Location: ../../../../horizontal/registroEspecialista.php?respuesta=correcto");
+            header("Location: ../Vista/BackEnd/Adminnoxadmin-12/horizontal/registroSujeto.php ?respuesta=correcto");
         } catch (Exception $e) {
             var_dump($e);
             // header("Location: ../Vista/pages/registroPaciente.php?respuesta=error");
