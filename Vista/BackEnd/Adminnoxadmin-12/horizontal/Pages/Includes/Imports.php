@@ -19,9 +19,9 @@
 
 <script src="assets/js/modernizr.min.js"></script>
 
-///
 
-link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+
+<!--link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">-->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

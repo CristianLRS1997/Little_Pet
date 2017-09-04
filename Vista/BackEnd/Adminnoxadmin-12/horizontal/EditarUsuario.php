@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -35,8 +35,8 @@
                                         <span><img src="assets/images/LogoLittleFrase.png" alt="" height="60"></span>
                                     </a>
                                 </h2>
-                                <h5 class="text-uppercase font-bold m-b-5 m-t-50">Registrar</h5>
-                                <p class="m-b-0">Registrate para adoptar o dar en adopcion</p>
+                                <h5 class="text-uppercase font-bold m-b-5 m-t-50">Editar</h5>
+                                <p class="m-b-0">Edita para adoptar o dar en adopcion</p>
                             </div>
                             <div class="account-content">
                                 <form class="form-horizontal" method="post" action="../../../../Controlador/UsuarioController.php?action=crear">
@@ -64,15 +64,33 @@
 
                                     <div class="form-group m-b-20">
                                         <div class="col-xs-12">
+                                            <label for="celular">Celular</label>
+                                            <input class="form-control" type="number" id="Celular" name="Celular" minlength="10" maxlength="12" required="" placeholder="ingresa tu Nuemero Celular ">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group m-b-20">
+                                        <div class="col-xs-12">
                                             <label for="Contrasena">Contraseña</label>
                                             <input class="form-control" type="password" required="" id="Contrasena" name="Contrasena"  placeholder="Ingresa tu Contraseña">
                                         </div>
                                     </div>
 
 
+                                    <div class="form-group m-b-20">
+                                        <div class="col-xs-12">
+                                            <label for="Fecha_Nacimiento">Fecha_Nacimiento</label>
+                                            <input class="form-control" type="date" required="" id="Fecha_Nacimiento" name="Fecha_Nacimiento"  placeholder="Ingresa tu Fecha de Nacimiento">
+                                        </div>
+                                    </div>
+
+
                                     <div class="form-group text-center m-t-10">
                                         <div class="col-xs-12">
-                                            <button class="btn btn-success btn-rounded w-md waves-effect waves-light" type="submit">Enviar</button>
+                                            <button
+                                                <i class="mdi mdi-account-settings-variant m-r-5" ></i> Editar Perfil
+                                            </button>
+                                            <!--<button class="btn btn-success btn-rounded w-md waves-effect waves-light" type="submit">Enviar</button>-->
                                         </div>
                                     </div>
 
