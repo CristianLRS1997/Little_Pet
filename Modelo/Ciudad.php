@@ -104,7 +104,7 @@ class Ciudad extends db_abstract_class
         // TODO: Implement buscarForId() method.
     }
 
-    protected static function buscar($query)
+    public static function buscar($query)
     {
        $arrci = array();
        $tmp = new Ciudad();
@@ -123,7 +123,7 @@ class Ciudad extends db_abstract_class
 
     }
 
-    protected static function getAll()
+    public static function getAll()
     {
       return Ciudad::buscar("SELECT * FROM littlepet.ciudad");
     }

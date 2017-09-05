@@ -20,12 +20,16 @@ class ciudadController
 
     }
 
-     static public function mostrar()
-    {
-     $ciudad = new Ciudad();
-
-
-
+    static public function mostrar ($isRequired=true, $id="IdCiudad", $nombre="IdCiudad", $class=""){
+        $arrciudad= Ciudad::getAll(); /*  */
+        $htmlSelect = "<select ".(($isRequired) ? "required" : "")." id= '".$id."' name='".$nombre."' class='".$class."'>";
+        $htmlSelect .= "<option >Seleccione</option>";
+        if(count($arrciudad) > 0){
+            foreach ($arrciudad as $ciudad)
+                $htmlSelect .= "<option value='".$ciudad->getIdCiudad()."'>".$ciudad->getNombre()."</option>";
+        }
+        $htmlSelect .= "</select>";
+        return $htmlSelect;
     }
 
 
