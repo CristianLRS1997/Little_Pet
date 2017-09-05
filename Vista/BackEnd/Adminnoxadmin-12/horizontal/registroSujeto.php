@@ -36,19 +36,38 @@
                     ofertas de adopción para que el consiga el hogar que merece con calor de familia.
                 </p>
 
+                <br>
+
                 <form role="form" method="post" action="../../../../Controlador/sujetoAdopcionController.php?action=crear">
 
-                    <div class="col-xs-10 center-page">
-                        <div>
-                            <label>
-                                <input type="radio" name="fb" value="op" />
-                                <img class="icon-colored" src="assets/images/icons/toucan-tropical-bird.svg" title="medium_priority.svg"/>
-                            </label>
-                        </div>
+                    <div class="col-xs-9 center-page">
 
+                        <label>
+                            <input type="radio" name="fb" value="op" />
+                            <img class="icon-colored" src="assets/images/icons/Perro.svg" title="Perros"/>
+                        </label>
 
+                        <label>
+                            <input type="radio" name="fb" value="op" />
+                            <img class="icon-colored" src="assets/images/icons/Ave.svg" title="Aves"/>
+                        </label>
+                        <label>
+                            <input type="radio" name="fb" value="op" />
+                            <img class="icon-colored" src="assets/images/icons/Gato.svg" title="Gatos"/>
+                        </label>
+
+                        <label>
+                            <input type="radio" name="fb" value="op" />
+                            <img class="icon-colored" src="assets/images/icons/Pez.svg" title="Peces"/>
+                        </label>
+
+                        <label>
+                            <input type="radio" name="fb" value="op" />
+                            <img class="icon-colored" src="assets/images/icons/Roedor.svg" title="Roedor"/>
+                        </label>
 
                     </div>
+
 
                     <div class="row">
 
@@ -99,27 +118,55 @@
                             </select>
                         </div>
 
+                        <div class="col-xs-6 col-md-3">
+                            <select style="background-color: #FEF9E7; border:none " required="" id="Alimentacion" name="Alimentacion" class="form-control" >
+                                <option value="">Alimentación</option>
+                                <option value="Normal">Normal</option>
+                                <option value="Especial">Especial</option>
+                                <option value="No Sabe">No Sabe</option>
+                            </select>
+                        </div>
+
                         <div class="col-xs-6">
-                            <div class="radio radio-info radio-inline">
-                                <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked>
-                                <label for="inlineRadio1">Esta Esterilizado</label>
+                            <div class="radio radio-warning radio-inline">
+                                <input type="radio" id="Si" value="Si" name="radioInline" checked>
+                                <label for="Si">Esta esterilizado</label>
                             </div>
-                            <div class="radio radio-inline">
-                                <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
-                                <label for="inlineRadio2">Sin esterilizar</label>
+                            <div class="radio radio-warning radio-inline">
+                                <input type="radio" id="No" value="Si" name="radioInline">
+                                <label for="No">Sin esterilizar</label>
                             </div>
 
                         </div>
 
                     </div>
 
+                    <br>
+
+
                     <div class="form-group">
-                        <textarea style="background-color: #FEF9E7; border:none " id="Descripcion" class="form-control"
-                                  name="Descripcion"
-                                  data-parsley-minlength="50"
-                                  data-parsley-minlength-message="Debe terner almenos una descripción de 50 caracteres.">
-                        </textarea>
+                        <textarea  style="background-color: #FEF9E7; border:none " id="Descripciom" class="form-control" name="Descripcion"
+                                  data-parsley-trigger="keyup" data-parsley-minlength="50"
+                                  data-parsley-minlength-message="Debe terner almenos una descripción de 50 caracteres."
+                                  data-parsley-validation-threshold="10" placeholder="Describe a tu mascota..."></textarea>
                     </div>
+
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="p-20 p-b-0">
+                                <div class="form-group clearfix" >
+                                    <div class="col-sm-12 padding-left-0 padding-right-0" >
+                                        <input type="file" name="files[]" id="filer_input1"
+                                               multiple="multiple">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
 
                     <div class="form-group row">
                         <div class="col-sm-8 col-sm-offset-4">

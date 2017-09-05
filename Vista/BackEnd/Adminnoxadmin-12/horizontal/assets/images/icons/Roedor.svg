@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   viewBox="0 0 296.666 296.666"
+   enable-background="new 0 0 296.666 296.666"
+   width="512px"
+   height="512px"
+   id="svg8"
+   sodipodi:docname="Raton.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata14">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="701"
+     inkscape:window-height="480"
+     id="namedview10"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="256"
+     inkscape:cy="256"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg8" />
+  <g
+     id="g6">
+    <g
+       id="g4">
+      <path
+         d="m247.355,131.372c14.35-3.65 24.963-16.484 24.963-31.973 0-18.318-14.847-33.082-33.165-33.082-15.974,0-29.305,11.33-32.458,26.365-18.17-13.397-40.607-21.652-64.895-21.652-55.096,0-100.692,41.318-108.46,93.318h-0.271c-18.234,0-33.069,14.804-33.069,33s14.835,33 33.069,33h114.931v-16h-114.931c-9.412,0-16.736-7.292-16.736-16.666 0-9.374 7.324-16.334 16.736-16.334h263.597l-49.311-49.976zm-25.687,33.315c-4.418,0-8-3.582-8-8s3.582-8 8-8 8,3.582 8,8c0,4.418-3.582,8-8,8z"
+         fill="#f49719"
+         id="path2" />
+    </g>
+  </g>
+</svg>
