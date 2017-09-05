@@ -28,16 +28,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<script src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
-<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="js/megamenu.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/easing.js"></script>
+<link rel="stylesheet" href="assets/css/flexslider.css" type="text/css" media="screen" />
+<link href="assets/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<link href="assets/css/form.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="assets/js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
-<script src="js/menu_jquery.js"></script>
-<script src="js/jquery.easydropdown.js"></script>
-<script src="js/jquery.etalage.min.js"></script>
+<script src="assets/js/menu_jquery.js"></script>
+<script src="assets/js/jquery.easydropdown.js"></script>
+<script src="assets/js/jquery.etalage.min.js"></script>
 <script>
     jQuery(document).ready(function($){
 
@@ -227,7 +227,31 @@
 <script src="assets/js/modernizr.min.js"></script>
 
 
+<!-- INDEX:HTML--->
+<!-- jQuery  -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/waves.js"></script>
+<script src="assets/js/jquery.slimscroll.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
 
+<!-- Counter js  -->
+<script src="../plugins/waypoints/jquery.waypoints.min.js"></script>
+<script src="../plugins/counterup/jquery.counterup.min.js"></script>
+
+<!--C3 Chart-->
+<script type="text/javascript" src="../plugins/d3/d3.min.js"></script>
+<script type="text/javascript" src="../plugins/c3/c3.min.js"></script>
+
+<!--Echart Chart-->
+<script src="../plugins/echart/echarts-all.js"></script>
+
+<!-- Dashboard init -->
+<script src="assets/pages/jquery.dashboard.js"></script>
+
+<!-- App js -->
+<script src="assets/js/jquery.core.js"></script>
+<script src="assets/js/jquery.app.js"></script>
 
 
 

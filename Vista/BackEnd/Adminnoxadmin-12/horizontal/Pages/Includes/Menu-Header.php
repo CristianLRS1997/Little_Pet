@@ -73,16 +73,16 @@
                     </li>
 
                     <li class="dropdown navbar-c-items">
-                        <a href="" class="dropdown-toggle waves-effect profile" data-toggle="dropdown" aria-expanded="true"><img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle"> </a>
+                        <a href="" class="dropdown-toggle waves-effect profile" data-toggle="dropdown" aria-expanded="true"><img src="archivos/<?php echo $_SESSION["DataUser"]["Foto"]; ?>" alt="user-img" class="img-circle"> </a>
                         <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list notify-list">
                             <li class="text-center">
-                                <h5>Hi, John</h5>
+                                <h5>Hola, <?php echo $_SESSION["DataUser"]["Nombres"] ?></h5>
                             </li>
                             <li><a href="javascript:void(0)"><i class="dripicons-user m-r-10"></i> Profile</a></li>
                             <li><a href="javascript:void(0)"><i class="dripicons-mail m-r-10"></i> <span class="badge badge-success pull-right">5</span> Messages</a></li>
                             <li><a href="javascript:void(0)"><i class="dripicons-gear m-r-10"></i> Settings</a></li>
                             <li><a href="javascript:void(0)"><i class="dripicons-lock m-r-10"></i> Lock screen</a></li>
-                            <li><a href="javascript:void(0)"><i class="dripicons-power m-r-10"></i> Logout</a></li>
+                            <li><a href="../../../../Controlador/UsuarioController.php?action=CerrarSession"><i class="dripicons-power m-r-10"></i> Salir</a></li>
                         </ul>
 
                     </li>
@@ -144,7 +144,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="../../Adminnoxadmin-12/horizontal/registrarSujeto.php"><i class="fi-paper-stack"></i>DAR EN ADOPCÍON</a>
+                        <a href="../../Adminnoxadmin-12/horizontal/registroSujeto.php"><i class="fi-paper-stack"></i>DAR EN ADOPCÍON</a>
                     </li>
 
                     <li class="has-submenu">

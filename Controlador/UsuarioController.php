@@ -1,5 +1,7 @@
 <?php
+session_start();
 require_once (__DIR__.'/../Modelo/Usuario.php');
+require_once (__DIR__.'/../Vista/BackEnd/Adminnoxadmin-12/horizontal/Pages/apis/class.upload.php');
 
 if(!empty($_GET['action'])){
     UsuarioController::main($_GET['action']);
@@ -23,9 +25,9 @@ class UsuarioController
         } else if ($action == "selectUSuario") {
             pacienteController::selectUsuario();
         } else if($action == "Login"){
-            usuarios_controller::Login();
+            UsuarioController::Login();
         } else if($action == "CerrarSession"){
-            usuarios_controller::CerrarSession();
+            UsuarioController::CerrarSession();
         }
     }
 
@@ -40,7 +42,25 @@ class UsuarioController
             $arrayUsuario['Contrasena'] = $_POST['Contrasena'];
             $arrayUsuario['Estado'] = "Activo";
             $arrayUsuario['Fecha_Nacimiento'] = "0000-00-00";
-            $arrayUsuario['Foto'] = "Sin Registro";
+            /* Subir la Foto */
+            $archivos = new Upload($_FILES['file_profile']);
+            $NameArchivos = "";
+            if ($archivos->uploaded){
+                $archivos->file_new_name_body = date('H-M-s')."-".$archivos->file_src_name_body;
+                $NameArchivos =  date('H-M-s')."-".$archivos->file_src_name_body.".".$archivos->file_src_name_ext;
+                $archivos->Process('../Vista/BackEnd/Adminnoxadmin-12/horizontal/archivos');
+                if($archivos->processed){
+                    echo "Archivo Subido";
+                }else{
+                    echo "Archivo No Subido, Error en la carpeta..".$archivos->error;
+                }
+                $archivos->Clean();
+            }else{
+                echo "Error al subir el archivo...".$archivos->error;
+            }
+
+            $arrayUsuario['Foto'] = $NameArchivos;
+            var_dump($arrayUsuario);
             $Usuario = new Usuario($arrayUsuario);
             $Usuario->insertar();
             header("Location: ../Vista/BackEnd/Adminnoxadmin-12/horizontal/registroUsuario.php?respuesta=correcto");
@@ -74,46 +94,35 @@ class UsuarioController
     }
 
     public function Login (){
+
         try {
             $Email = $_POST['Email'];
             $Contrasena = $_POST['Contrasena'];
             if(!empty($Email) && !empty($Contrasena)){
                 $respuesta = Usuario::Login($Email, $Contrasena);
                 if (is_array($respuesta)) {
-                    if($respuesta["Estado"] == "Activo"){
+                  if($respuesta["Estado"] == "Activo"){
                         $_SESSION['DataUser'] = $respuesta;
                         echo TRUE;
                     }else{
-                        echo "<div class='ui-state-error ui-corner-all' style='margin-top: 20px; padding: 0 .7em;'>";
-                        echo "<p><span class='ui-icon ui-icon-alert' style='float: left; margin-right: .3em;'></span>";
-                        echo "<strong>Error!</strong> El usuario se encuentra Inactivo</p>";
-                        echo "</div>";
+                        echo "El usuario se encuentra Inactivo";
                     }
                 }else if($respuesta == "Contrasena Incorrecto"){
-                    echo "<div class='ui-state-error ui-corner-all' style='margin-top: 20px; padding: 0 .7em;'>";
-                    echo "<p><span class='ui-icon ui-icon-alert' style='float: left; margin-right: .3em;'></span>";
-                    echo "<strong>Error!</strong> La Contraseña No Coincide Con El Usuario</p>";
-                    echo "</div>";
+                    echo "La Contraseña No Coincide Con El Usuario";
                 }else if($respuesta == "No existe el usuario"){
-                    echo "<div class='ui-state-error ui-corner-all' style='margin-top: 20px; padding: 0 .7em;'>";
-                    echo "<p><span class='ui-icon ui-icon-alert' style='float: left; margin-right: .3em;'></span>";
-                    echo "<strong>Error!</strong> No Existe Un Usuario Con Estos Datos</p>";
-                    echo "</div>";
+                    echo "No Existe Un Usuario Con Estos Datos";
                 }
             }else{
-                echo "<div class='ui-state-error ui-corner-all' style='margin-top: 20px; padding: 0 .7em;'>";
-                echo "<p><span class='ui-icon ui-icon-alert' style='float: left; margin-right: .3em;'></span>";
-                echo "<strong>Error!</strong> Datos Vacios</p>";
-                echo "</div>";
+                echo "Datos Vacios";
             }
         } catch (Exception $e) {
-            header("Location: ../login.php?respuesta=error");
+            echo "Error No Identificado!!! ".$e;
         }
     }
 
     public function CerrarSession (){
         session_destroy();
-        header("Location: ../Vista/login.php");
+        header("Location: ../Vista/BackEnd/Adminnoxadmin-12/horizontal/login.php");
     }
 
 

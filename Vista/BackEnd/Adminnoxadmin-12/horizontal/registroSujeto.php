@@ -1,3 +1,11 @@
+
+<?php
+session_start();
+if (empty($_SESSION["DataUser"]["IdUsuario"])){
+    header("Location: .php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +23,14 @@
     <?php include("Pages/Includes/Imports.php"); ?>
 
 </head>
+
+<script type="text/javascript">
+    function session() {
+        alert(<?php echo  $_SESSION["user"]?>)
+
+    }
+
+</script>
 
 <body>
 

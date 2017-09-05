@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!empty($_SESSION['idUsuario'])){
+    header("Location: registroAdopcion.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

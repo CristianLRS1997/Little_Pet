@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -39,7 +39,7 @@
                                 <p class="m-b-0">Registrate para adoptar o dar en adopcion</p>
                             </div>
                             <div class="account-content">
-                                <form class="form-horizontal" method="post" action="../../../../Controlador/UsuarioController.php?action=crear">
+                                <form class="form-horizontal" method="post" enctype="multipart/form-data" action="../../../../Controlador/UsuarioController.php?action=crear">
 
                                     <div class="form-group m-b-20">
                                         <div class="col-xs-12">
@@ -69,6 +69,12 @@
                                         </div>
                                     </div>
 
+                                    <div class="form-group m-b-20">
+                                        <div class="col-xs-12">
+                                            <label for="Contrasena">Imagen</label>
+                                            <input type="file" size="32" name="file_profile" value="" />
+                                        </div>
+                                    </div>
 
                                     <div class="form-group text-center m-t-10">
                                         <div class="col-xs-12">

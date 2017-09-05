@@ -17,8 +17,23 @@ if (!empty($_SESSION['idUsuario'])){
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/LogoLittle.png">
 
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Sweet Alert -->
+    <link href="../plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
+
     <!-- App css -->
-    <?php include("Pages/Includes/Imports.php"); ?>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/modernizr.min.js"></script>
 
 </head>
 
@@ -45,7 +60,7 @@ if (!empty($_SESSION['idUsuario'])){
 
                             </div>
                             <div class="account-content">
-                                <form id="frmLogin" name="frmLogin" action="../Controlador/UsuarioController.php?action=Login" class="form-horizontal">
+                                <form id="frmLogin" name="frmLogin" method="post" class="form-horizontal">
 
                                     <div class="form-group m-b-20">
                                         <div class="col-xs-12">
@@ -64,7 +79,7 @@ if (!empty($_SESSION['idUsuario'])){
 
                                     <div class="form-zgroup text-center m-t-10">
                                         <div class="col-xs-12">
-                                            <button class="btn btn-md btn-block btn-primary waves-effect waves-light" id="btnEnviar" name="btnEnviar" type="submit"> Inciar Sesion </button>
+                                            <input class="btn btn-md btn-block btn-primary waves-effect waves-light" id="btnEnviar" value="Inciar Sesion" name="btnEnviar" type="submit">
                                         </div>
                                     </div>
 
@@ -95,37 +110,29 @@ if (!empty($_SESSION['idUsuario'])){
 <!-- END HOME -->
 
 <script>
-    $("#frmLogin").submit(function() {
+    $("#frmLogin").submit(function(e) {
         e.preventDefault();
+
         var Email = $("#Email").val();
         var Contrasena = $("#Contrasena").val();
 
         $.ajax({
             method: "POST",
-            url: "../Controlador/UsuarioController.php?action=Login",
+            url: "../../../../Controlador/UsuarioController.php?action=Login",
             data: { Email: Email, Contrasena: Contrasena}
         })
             .done(function( msg ) {
+                console.log(msg);
                 if(msg == "1"){
-                    swal(
-                        {
-                            title: 'Ingreso Correcto!',
-                            text: 'Bienvenido al Sistema!',
-                            type: 'success',
-                            confirmButtonColor: '#4fa7f3',
-                            timer: 2000
-                        }
-                    ).then(
-                        window.location.href = "Index.php";
-                    )
+                    window.location.href = "Index.php";
                 }else{
                     swal(
                         {
                             title: 'Error!',
-                            text: 'Ha Ocurrido un Error! '+msg,
+                            text: ''+msg,
                             type: 'error',
                             confirmButtonColor: '#f96a74',
-                            timer: 2000
+                            timer: 5000
                         }
                     );
                 }
@@ -133,6 +140,9 @@ if (!empty($_SESSION['idUsuario'])){
     });
 </script>
 
+<!-- Sweet-Alert  -->
+<script src="../plugins/sweet-alert2/sweetalert2.min.js"></script>
+<script src="assets/pages/jquery.sweet-alert.init.js"></script>
 
 </body>
 </html>
