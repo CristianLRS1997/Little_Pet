@@ -22,7 +22,7 @@ class ciudadController
 
      static public function mostrar()
     {
-
+     $ciudad = new Ciudad();
 
 
 
