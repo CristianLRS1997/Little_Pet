@@ -13,7 +13,7 @@ class Comentario extends db_abstract_class
     private $idcomentario;
     private $descripcion;
     private $sujetoadopcion ;
-    private $respuesta ;
+    private $Respuesta ;
     private $usuario ;
 
 
@@ -97,11 +97,11 @@ class Comentario extends db_abstract_class
     }
 
     /**
-     * @param string $respuesta
+     * @param string $Respuesta
      */
-    public function setRespuesta($respuesta)
+    public function setRespuesta($Respuesta)
     {
-        $this->respuesta = $respuesta;
+        $this->respuesta = $Respuesta;
     }
 
     /**

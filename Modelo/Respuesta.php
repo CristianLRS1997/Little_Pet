@@ -9,10 +9,10 @@ require_once('db_abstract_class.php');
 class Respuesta extends db_abstract_class
 {
 
-        private $idrespuesta;
-        private $respuesta ;
-        private $pregunta ;
-        private $adopcion ;
+        private $IdRespuesta;
+        private $Respuesta ;
+        private $Pregunta_IdPregunta ;
+        private $Adopcion_IdAdopcion ;
 
 
     public function __construct($littlepet_data=array())
@@ -23,9 +23,9 @@ class Respuesta extends db_abstract_class
             }
         }else{
         $this->idrespuesta = "";
-        $this->respuesta = "";
-        $this->pregunta = "";
-        $this->adopcion = "";
+        $this->Respuesta = "";
+        $this->Pregunta_IdPregunta = "";
+        $this->Adopcion_IdAdopcion = "";
 
     }
     }
@@ -40,15 +40,15 @@ class Respuesta extends db_abstract_class
      */
     public function getIdrespuesta()
     {
-        return $this->idrespuesta;
+        return $this->IdRespuesta;
     }
 
     /**
-     * @param string $idrespuesta
+     * @param string $IdRespuesta
      */
-    public function setIdrespuesta($idrespuesta)
+    public function setIdrespuesta($IdRespuesta)
     {
-        $this->idrespuesta = $idrespuesta;
+        $this->idrespuesta = $IdRespuesta;
     }
 
     /**
@@ -56,15 +56,15 @@ class Respuesta extends db_abstract_class
      */
     public function getRespuesta()
     {
-        return $this->respuesta;
+        return $this->Respuesta;
     }
 
     /**
-     * @param string $respuesta
+     * @param string $Respuesta
      */
-    public function setRespuesta($respuesta)
+    public function setRespuesta($Respuesta)
     {
-        $this->respuesta = $respuesta;
+        $this->respuesta = $Respuesta;
     }
 
     /**
@@ -72,15 +72,15 @@ class Respuesta extends db_abstract_class
      */
     public function getPregunta()
     {
-        return $this->pregunta;
+        return $this->Pregunta_IdPregunta;
     }
 
     /**
-     * @param string $pregunta
+     * @param string $Pregunta_IdPregunta
      */
-    public function setPregunta($pregunta)
+    public function setPregunta($Pregunta_IdPregunta)
     {
-        $this->pregunta = $pregunta;
+        $this->pregunta = $Pregunta_IdPregunta;
     }
 
     /**
@@ -88,15 +88,15 @@ class Respuesta extends db_abstract_class
      */
     public function getAdopcion()
     {
-        return $this->adopcion;
+        return $this->Adopcion_IdAdopcion;
     }
 
     /**
      * @param string $adopcion
      */
-    public function setAdopcion($adopcion)
+    public function setAdopcion($Adopcion_IdAdopcion)
     {
-        $this->adopcion = $adopcion;
+        $this->adopcion = $Adopcion_IdAdopcion;
     }
 
     public static function buscarForId($id)
@@ -104,11 +104,11 @@ class Respuesta extends db_abstract_class
         $resp = new Respuesta();
 
         if ($id >0 ){
-            $getrow = $resp->getRow("SELECT * FROM  littlepet.respuesta WHERE respuesta =?", array($id));
+            $getrow = $resp->getRow("SELECT * FROM  littlepet.respuesta WHERE Respuesta =?", array($id));
             $resp -> idrespuesta = $getrow['IdRespuesta'];
-            $resp -> respuesta = $getrow['Respuesta'];
-            $resp -> pregunta = $getrow['Pregunta_IdPregunta'];
-            $resp -> adopcion = $getrow['Adopcion_IdAdopcion'];
+            $resp -> Respuesta = $getrow['Respuesta'];
+            $resp -> Pregunta_IdPregunta = $getrow['Pregunta_IdPregunta'];
+            $resp -> Adopcion_IdAdopcion = $getrow['Adopcion_IdAdopcion'];
 
             $resp->Disconnect();
             return $resp;
@@ -126,10 +126,10 @@ class Respuesta extends db_abstract_class
         $getrows = $tmp->getRows($query);
         foreach ( $getrows as $valor) {
             $resp = new Respuesta();
-            $resp -> idrespuesta = $valor['IdRespuesta'];
-            $resp -> respuesta = $valor['Respuesta'];
-            $resp -> pregunta = $valor['Pregunta_IdPregunta'];
-            $resp -> adopcion = $valor['Adopcion_IdAdopcion'];
+            $resp -> IdRespuesta= $valor['IdRespuesta'];
+            $resp -> Respuesta = $valor['Respuesta'];
+            $resp -> Pregunta_IdPregunta = $valor['Pregunta_IdPregunta'];
+            $resp -> Adopcion_IdAdopcion = $valor['Adopcion_IdAdopcion'];
             array_push($arrresp, $resp);
         }
         $tmp->Disconnect();
@@ -144,9 +144,9 @@ class Respuesta extends db_abstract_class
     public function insertar()
     {
         $this-> insertRow("INSERT INTO littlepet.respuesta VALUES ('NULL',?,?,?)",array(
-            $this->respuesta,
-            $this-> pregunta,
-            $this -> adopcion,
+            $this->Respuesta,
+            $this-> Pregunta_IdPregunta,
+            $this -> Adopcion_IdAdopcion,
 
 
         ));
@@ -158,9 +158,9 @@ class Respuesta extends db_abstract_class
     public function editar()
     {
         $this-> updateRow("UPDATE littlepet.respuesta SET Respuesta = ? ,Pregunta_IdPregunta=? ,Adopcion_IdAdopcion=?",array(
-            $this->respuesta,
-            $this-> pregunta,
-            $this -> adopcion,
+            $this->Respuesta,
+            $this-> Pregunta_IdPregunta,
+            $this -> Adopcion_IdAdopcion,
         ));
         $this->Disconnect();
 
