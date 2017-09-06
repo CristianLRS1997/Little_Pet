@@ -39,7 +39,7 @@
                                 <p class="m-b-0">Registrate para adoptar o dar en adopcion</p>
                             </div>
                             <div class="account-content">
-                                <form class="form-horizontal" method="post" enctype="multipart/form-data" action="../../../../Controlador/UsuarioController.php?action=crear">
+                                <form id="frmregistrar" class="form-horizontal" method="post" enctype="multipart/form-data" action="../../../../Controlador/UsuarioController.php?action=crear">
 
                                     <div class="form-group m-b-20">
                                         <div class="col-xs-12">
@@ -105,6 +105,37 @@
     </div>
 </section>
 <!-- END HOME -->
+</script><script>
+    $("#frmregistrar").submit(function(e) {
+        e.preventDefault();
+
+        var Nombres =$("#Nombres").val();
+        var Apellidos =$("#Apellidos").val();
+        var Email = $("#Email").val();
+        var Contrasena = $("#Contrasena").val();
+
+        $.ajax({
+            method: "POST",
+            url: "../../../../Controlador/UsuarioController.php?action=crear",
+            data: { Nombres: Nombres,Apellidos:Apellidos ,Email: Email, Contrasena: Contrasena}
+        })
+            .done(function( msg ) {
+                console.log(msg);
+                if(msg == "1"){
+                    window.location.href = "Index.php";
+                }else{
+                    swal(
+                        {
+                            title: 'Se Registro con Exito!',
+                            text: ''+msg,
+                            type: 'error',
+                            confirmButtonColor: '#f96a74',
+                            timer: 5000
+                        }
+                    );
+                }
+            });
+    });
 
 
 

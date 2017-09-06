@@ -8,7 +8,7 @@ if (!empty($_SESSION['idUsuario'])){
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Adminox - Responsive Web App Kit</title>
+    <title>Little Pet</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
@@ -18,7 +18,7 @@ if (!empty($_SESSION['idUsuario'])){
     <link rel="shortcut icon" href="assets/images/LogoLittle.png">
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="assets/images/LogoLittle.png">
 
     <!-- Sweet Alert -->
     <link href="../plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
@@ -109,7 +109,8 @@ if (!empty($_SESSION['idUsuario'])){
 </section>
 <!-- END HOME -->
 
-<script>
+
+</script><script>
     $("#frmLogin").submit(function(e) {
         e.preventDefault();
 
@@ -138,7 +139,6 @@ if (!empty($_SESSION['idUsuario'])){
                 }
             });
     });
-</script>
 
 <!-- Sweet-Alert  -->
 <script src="../plugins/sweet-alert2/sweetalert2.min.js"></script>
