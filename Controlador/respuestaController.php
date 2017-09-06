@@ -19,28 +19,22 @@ class respuestaController
         }else if ($action == "mostrar"){
             respuestaController::mostrar();
         }
-
-
-
-
     }
 
     static public function crear()
     {
         try{
-
-
-
-
+            $arrresp = array();
+            $arrresp['Respuesta']=$_POST['Respuesta'];
+            $arrresp['Pregunta_IdPregunta']=$_POST['Pregunta_IdPregunta'];
+            $arrresp['Adopcion_IdAdopcion']=$_POST['Adopcion_IdAdopcion'];
+            $resp = new Respuesta($arrresp);
+            $resp->insertar();
+            header("Location: ../Vista/BackEnd/Adminnoaxadmin-12/horizontal/Respuesta.php?respuesta=correcto");
         }catch (Exception $e){
            var_dump($e);
 
         }
-
-
-
-
-
     }
 
 
