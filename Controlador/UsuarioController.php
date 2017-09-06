@@ -55,6 +55,7 @@ class UsuarioController
                     echo "Archivo No Subido, Error en la carpeta..".$archivos->error;
                 }
                 $archivos->Clean();
+                
             }else{
                 echo "Error al subir el archivo...".$archivos->error;
             }
