@@ -37,5 +37,14 @@ class respuestaController
         }
     }
 
+     static public function mostrar()
+    {
+          
+
+
+
+
+    }
+
 
 }
