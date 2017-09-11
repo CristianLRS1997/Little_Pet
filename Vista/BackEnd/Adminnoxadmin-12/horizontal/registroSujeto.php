@@ -19,6 +19,7 @@ header("Location: login.php");
 
     <title>Little Pet</title>
 
+
     <?php include("Pages/Includes/Imports.php"); ?>
 
 </head>
@@ -60,26 +61,26 @@ header("Location: login.php");
                     <div class="col-xs-9 center-page">
 
                         <label>
-                            <input type="radio" name="fb" value="op" />
+                            <input type="radio" name="Especie" value="op" checked />
                             <img class="icon-colored" src="assets/images/icons/Perro.svg" title="Perros"/>
                         </label>
 
                         <label>
-                            <input type="radio" name="fb" value="op" />
+                            <input type="radio" name="Especie" value="op" />
                             <img class="icon-colored" src="assets/images/icons/Ave.svg" title="Aves"/>
                         </label>
                         <label>
-                            <input type="radio" name="fb" value="op" />
+                            <input type="radio" name="Especie" value="op" />
                             <img class="icon-colored" src="assets/images/icons/Gato.svg" title="Gatos"/>
                         </label>
 
                         <label>
-                            <input type="radio" name="fb" value="op" />
+                            <input type="radio" name="Especie" value="op" />
                             <img class="icon-colored" src="assets/images/icons/Pez.svg" title="Peces"/>
                         </label>
 
                         <label>
-                            <input type="radio" name="fb" value="op" />
+                            <input type="radio" name="Especie" value="op" />
                             <img class="icon-colored" src="assets/images/icons/Roedor.svg" title="Roedor"/>
                         </label>
 
@@ -119,8 +120,8 @@ header("Location: login.php");
                             <select style="background-color: #FEF9E7; border:none" id="Tamano" name="Tamano" class="form-control" required="">
                                 <option value="">Tamaño</option>
                                 <option value="Grande">Grande</option>
-                                <option value="Pequeño">Pequeño</option>
                                 <option value="Mediano">Mediano</option>
+                                <option value="Pequeño">Pequeño</option>
                                 <option value="Mini">Mini</option>
                             </select>
                         </div>
@@ -131,7 +132,7 @@ header("Location: login.php");
                     <div class="row">
                         <div class="col-xs-3">
                             <select style="background-color: #FEF9E7; border:none" id="Vacunas" name="Vacunas" class="form-control" required="">
-                                <option value="">Vacunas...</option>
+                                <option value="">Vacunas</option>
                                 <option value="Si">Si</option>
                                 <option value="No">No</option>
                                 <option value="No Reporta">No Reporta</option>
@@ -149,11 +150,11 @@ header("Location: login.php");
 
                         <div class="col-xs-6">
                              <div class="radio radio-warning radio-inline">
-                                 <input type="radio" id="Si" value="Si" name="radioInline" checked>
+                                 <input type="radio" id="Si" value="Si" name="Esterilizado" checked>
                                  <label for="Si">Esta esterilizado</label>
                              </div>
                              <div class="radio radio-warning radio-inline">
-                                 <input type="radio" id=No value="No" name="radioInline">
+                                 <input type="radio" id=No value="No" name="Esterilizado">
                                  <label for="No"> Sin esterilizar </label>
                              </div>
                         </div>
@@ -168,18 +169,27 @@ header("Location: login.php");
                                   data-parsley-validation-threshold="10" placeholder="Describe a tu mascota..."></textarea>
                     </div>
 
-                    <br>
+                    <div class="p-20 p-b-0">
+                        <p class="text-warning font-18">Fotos</p>
+                        <div class="form-group clearfix">
+                            <div class="col-sm-12 padding-left-0 padding-right-0">
+                                <input type="file" name="files[]" id="filer_input1"
+                                       required multiple="multiple">
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="form-group row">
                         <div class="col-sm-8 col-sm-offset-4">
                             <button type="reset" class="btn waves-effect w-md waves-light btn-lg font-15" onmouseout="this.style.background ='#D2D2D2'"  onmouseover="this.style.background ='#8c8c8c'" style=" background-color: #D2D2D2 ; color: #fdfefe; border-radius: 5px">
                                 <strong>Cancelar</strong>
                             </button>
-                            <button type="submit" class="btn waves-effect w-md waves-light btn-lg font-15 " value="validate" onmouseout="this.style.background ='#F5B041'"  onmouseover="this.style.background ='#F77C10'" style= "background-color: #F5B041 ; color: #fdfefe; border-radius: 5px">
+                            <button type="submit" class="btn waves-effect w-md waves-light btn-lg font-15 " id="sa-success" value="validate" onmouseout="this.style.background ='#F5B041'"  onmouseover="this.style.background ='#F77C10'" style= "background-color: #F5B041 ; color: #fdfefe; border-radius: 5px">
                                 <strong>Guardar</strong>
                             </button>
                         </div>
                     </div>
+
 
                 </form>
 
@@ -195,7 +205,30 @@ header("Location: login.php");
 </body>
 
 
+<!-- FORM-VALIDATION.HTML -->
 
+<!-- Parsley js -->
+<script type="text/javascript" src="../plugins/parsleyjs/parsley.min.js"></script>
+
+<!-- App js -->
+<script src="assets/js/jquery.core.js"></script>
+<script src="assets/js/jquery.app.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('form').parsley();
+    });
+    $(function () {
+        $('#demo-form').parsley().on('field:validated', function () {
+            var ok = $('.parsley-error').length === 0;
+            $('.alert-info').toggleClass('hidden', !ok);
+            $('.alert-warning').toggleClass('hidden', ok);
+        })
+            .on('form:submit', function () {
+                return false; // Don't submit form for this demo
+            });
+    });
+</script>
 
 
 </html>

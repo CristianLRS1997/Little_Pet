@@ -17,8 +17,6 @@ if (!empty($_SESSION['idUsuario'])){
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/LogoLittle.png">
 
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
 
     <!-- Sweet Alert -->
     <link href="../plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css">

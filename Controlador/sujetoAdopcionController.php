@@ -26,7 +26,7 @@ class sujetoAdopcionController
             $arraySujetoAdopcion['Meses'] = $_POST['Meses'];
             $arraySujetoAdopcion['Nombre'] = $_POST['Nombre'];
             $arraySujetoAdopcion['Tamano'] = $_POST['Tamano'];
-            $arraySujetoAdopcion['Esterilizado'] = "Si";
+            $arraySujetoAdopcion['Esterilizado'] = $_POST['Esterilizado'];
             $arraySujetoAdopcion['Vacunas'] = "Si";
             $arraySujetoAdopcion['Descripcion'] = $_POST['Descripcion'];
             $arraySujetoAdopcion['Dueno'] = "1";

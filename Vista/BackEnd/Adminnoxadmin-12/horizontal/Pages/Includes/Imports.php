@@ -1,4 +1,11 @@
-<!-- IMPORT FORM-VALIDATION.HTML -->
+<!-- IMPORT FORM-UPLOADS.HTML -->
+
+<!-- Jquery filer css -->
+<link href="../plugins/jquery.filer/css/jquery.filer.css" rel="stylesheet" />
+<link href="../plugins/jquery.filer/css/themes/jquery.filer-dragdropbox-theme.css" rel="stylesheet" />
+
+<!-- Bootstrap fileupload css -->
+<link href="../plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" />
 
 <!-- App css -->
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -18,8 +25,6 @@
 
 <script src="assets/js/modernizr.min.js"></script>
 
-<!-- IMPORT FORM-VALIDATION.HTML FOOTER -->
-
 <!-- jQuery  -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
@@ -27,29 +32,17 @@
 <script src="assets/js/jquery.slimscroll.js"></script>
 <script src="assets/js/jquery.scrollTo.min.js"></script>
 
-<!-- Parsley js -->
-<script type="text/javascript" src="../plugins/parsleyjs/parsley.min.js"></script>
+<!-- Jquery filer js -->
+<script src="../plugins/jquery.filer/js/jquery.filer.min.js"></script>
+
+<!-- Bootstrap fileupload js -->
+<script src="../plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+<!-- page specific js -->
+<script src="assets/pages/jquery.fileuploads.init.js"></script>
 
 <!-- App js -->
 <script src="assets/js/jquery.core.js"></script>
 <script src="assets/js/jquery.app.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('form').parsley();
-    });
-    $(function () {
-        $('#demo-form').parsley().on('field:validated', function () {
-            var ok = $('.parsley-error').length === 0;
-            $('.alert-info').toggleClass('hidden', !ok);
-            $('.alert-warning').toggleClass('hidden', ok);
-        })
-            .on('form:submit', function () {
-                return false; // Don't submit form for this demo
-            });
-    });
-</script>
-
 
 
 
@@ -119,3 +112,11 @@
 <![endif]-->
 
 <script src="assets/js/modernizr.min.js"></script>
+
+
+
+
+
+
+
+
