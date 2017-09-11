@@ -1,8 +1,7 @@
-
 <?php
 session_start();
 if (empty($_SESSION["DataUser"]["IdUsuario"])){
-    header("Location: .php");
+header("Location: login.php");
 }
 ?>
 
@@ -24,6 +23,7 @@ if (empty($_SESSION["DataUser"]["IdUsuario"])){
 
 </head>
 
+
 <script type="text/javascript">
     function session() {
         alert(<?php echo  $_SESSION["user"]?>)
@@ -37,6 +37,7 @@ if (empty($_SESSION["DataUser"]["IdUsuario"])){
 <header id="topnav">
 
     <?php include("Pages/Includes/Menu-Header.php"); ?>
+
 
 </header>
 
@@ -54,7 +55,7 @@ if (empty($_SESSION["DataUser"]["IdUsuario"])){
 
                 <br>
 
-                <form role="form" method="post" action="../../../../Controlador/sujetoAdopcionController.php?action=crear">
+                <form role="form" method="post" action="../../../../Controlador/sujetoAdopcionController.php?action=crear" >
 
                     <div class="col-xs-9 center-page">
 
@@ -85,37 +86,41 @@ if (empty($_SESSION["DataUser"]["IdUsuario"])){
                     </div>
 
 
-                    <div class="row">
 
-                        <div class="col-xs-6 ">
-                            <input type="text" style="background-color: #FEF9E7 ; border:none" id="Nombre" name="Nombre" class="form-control" required
-                                   data-parsley-minlength="2" placeholder="Nombre de la mascota"/>
-                        </div>
+                    <div class="row">
                         <div class="col-xs-6">
-                            <select style="background-color: #FEF9E7 ; border:none" required="" id="Genero"  name="Genero" class="form-control" >
-                                <option value="">Genéro del Animal</option>
+                            <input type="text" style="background-color: #FEF9E7 ; border:none" id="Nombre" name="Nombre" parsley-trigger="change" required
+                                   data-parsley-minlength="2" placeholder="Nombre de la mascota" class="form-control">
+                        </div>
+
+                        <div class="col-xs-6">
+                            <select style="background-color: #FEF9E7 ; border:none" id="Genero" name="Genero" class="form-control" required="">
+                                <option value="">Genero del Animal</option>
                                 <option value="Macho">Macho</option>
                                 <option value="Hembra">Hembra</option>
                             </select>
                         </div>
                     </div>
+
                     <br>
+
                     <div class="row">
                         <div class="col-xs-6 col-md-3">
                             <input style="background-color: #FEF9E7 ; border:none" type="number" id="Anos" name="Anos" class="form-control" required
                                    data-parsley-minlength="1" placeholder="Años"/>
                         </div>
+
                         <div class="col-xs-6 col-md-3">
                             <input style="background-color: #FEF9E7 ; border:none" type="number" id="Meses" name="Meses" class="form-control" required
                                    data-parsley-minlength="1" placeholder="Meses"/>
                         </div>
 
                         <div class="col-xs-6">
-                            <select style="background-color: #FEF9E7; border:none " required="" id="Tamano" name="Tamano" class="form-control" >
+                            <select style="background-color: #FEF9E7; border:none" id="Tamano" name="Tamano" class="form-control" required="">
                                 <option value="">Tamaño</option>
                                 <option value="Grande">Grande</option>
-                                <option value="Mediano">Mediano</option>
                                 <option value="Pequeño">Pequeño</option>
+                                <option value="Mediano">Mediano</option>
                                 <option value="Mini">Mini</option>
                             </select>
                         </div>
@@ -123,63 +128,44 @@ if (empty($_SESSION["DataUser"]["IdUsuario"])){
 
                     <br>
 
-                    <div class="form-group row">
-
-                        <div class="col-xs-6 col-md-3">
-                            <select style="background-color: #FEF9E7; border:none " required="" id="Vacunas" name="Vacunas" class="form-control" >
-                                <option value="">Vacunas</option>
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <select style="background-color: #FEF9E7; border:none" id="Vacunas" name="Vacunas" class="form-control" required="">
+                                <option value="">Vacunas...</option>
                                 <option value="Si">Si</option>
                                 <option value="No">No</option>
                                 <option value="No Reporta">No Reporta</option>
                             </select>
                         </div>
 
-                        <div class="col-xs-6 col-md-3">
-                            <select style="background-color: #FEF9E7; border:none " required="" id="Alimentacion" name="Alimentacion" class="form-control" >
+                        <div class="col-xs-3">
+                            <select style="background-color: #FEF9E7; border:none" id="Alimentacion" name="Alimentacion" class="form-control" required="">
                                 <option value="">Alimentación</option>
-                                <option value="Normal">Normal</option>
                                 <option value="Especial">Especial</option>
+                                <option value="Normal">Normal</option>
                                 <option value="No Sabe">No Sabe</option>
                             </select>
                         </div>
 
                         <div class="col-xs-6">
-                            <div class="radio radio-warning radio-inline">
-                                <input type="radio" id="Si" value="Si" name="radioInline" checked>
-                                <label for="Si">Esta esterilizado</label>
-                            </div>
-                            <div class="radio radio-warning radio-inline">
-                                <input type="radio" id="No" value="Si" name="radioInline">
-                                <label for="No">Sin esterilizar</label>
-                            </div>
-
+                             <div class="radio radio-warning radio-inline">
+                                 <input type="radio" id="Si" value="Si" name="radioInline" checked>
+                                 <label for="Si">Esta esterilizado</label>
+                             </div>
+                             <div class="radio radio-warning radio-inline">
+                                 <input type="radio" id=No value="No" name="radioInline">
+                                 <label for="No"> Sin esterilizar </label>
+                             </div>
                         </div>
-
                     </div>
 
                     <br>
 
-
                     <div class="form-group">
-                        <textarea  style="background-color: #FEF9E7; border:none " id="Descripciom" class="form-control" name="Descripcion"
+                        <textarea style="background-color: #FEF9E7; border:none " id="Descripcion" class="form-control" name="Descripcion" required
                                   data-parsley-trigger="keyup" data-parsley-minlength="50"
                                   data-parsley-minlength-message="Debe terner almenos una descripción de 50 caracteres."
                                   data-parsley-validation-threshold="10" placeholder="Describe a tu mascota..."></textarea>
-                    </div>
-
-
-
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="p-20 p-b-0">
-                                <div class="form-group clearfix" >
-                                    <div class="col-sm-12 padding-left-0 padding-right-0" >
-                                        <input type="file" name="files[]" id="filer_input1"
-                                               multiple="multiple">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <br>
@@ -207,5 +193,9 @@ if (empty($_SESSION["DataUser"]["IdUsuario"])){
 <!-- end wrapper -->
 
 </body>
+
+
+
+
 
 </html>

@@ -1,5 +1,4 @@
-<!-- C3 charts css -->
-<link href="../plugins/c3/c3.min.css" rel="stylesheet" type="text/css"  />
+<!-- IMPORT FORM-VALIDATION.HTML -->
 
 <!-- App css -->
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -19,102 +18,8 @@
 
 <script src="assets/js/modernizr.min.js"></script>
 
+<!-- IMPORT FORM-VALIDATION.HTML FOOTER -->
 
-
-<!--link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">-->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<script src="assets/js/jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/easing.js"></script>
-<link rel="stylesheet" href="assets/css/flexslider.css" type="text/css" media="screen" />
-<link href="assets/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
-<link href="assets/css/form.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="assets/js/megamenu.js"></script>
-<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
-<script src="assets/js/menu_jquery.js"></script>
-<script src="assets/js/jquery.easydropdown.js"></script>
-<script src="assets/js/jquery.etalage.min.js"></script>
-<script>
-    jQuery(document).ready(function($){
-
-        $('#etalage').etalage({
-            thumb_image_width: 300,
-            thumb_image_height: 400,
-            source_image_width: 800,
-            source_image_height: 1000,
-            show_hint: true,
-            click_callback: function(image_anchor, instance_id){
-                alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
-            }
-        });
-
-    });
-</script>
-
-
-<!-- jQuery  -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/waves.js"></script>
-<script src="assets/js/jquery.slimscroll.js"></script>
-<script src="assets/js/jquery.scrollTo.min.js"></script>
-
-<!--Form Wizard-->
-<script src="../plugins/jquery.stepy/jquery.stepy.min.js" type="text/javascript"></script>
-<!--wizard initialization-->
-<script src="assets/pages/jquery.wizard-init.js" type="text/javascript"></script>
-
-<!-- App js -->
-<script src="assets/js/jquery.core.js"></script>
-<script src="assets/js/jquery.app.js"></script>
-
-<!-- jQuery  -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/waves.js"></script>
-<script src="assets/js/jquery.slimscroll.js"></script>
-<script src="assets/js/jquery.scrollTo.min.js"></script>
-
-<!-- App js -->
-<script src="assets/js/jquery.core.js"></script>
-<script src="assets/js/jquery.app.js"></script>
-
-
-
-
-<!--IMPORTS UI-BUTTONS.HTML-->
-
-<!-- App css -->
-<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link href="assets/css/core.css" rel="stylesheet" type="text/css" />
-<link href="assets/css/components.css" rel="stylesheet" type="text/css" />
-<link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
-<link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
-<link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
-<link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
-
-<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-<![endif]-->
-
-<script src="assets/js/modernizr.min.js"></script>
-<!-- jQuery  -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/waves.js"></script>
-<script src="assets/js/jquery.slimscroll.js"></script>
-<script src="assets/js/jquery.scrollTo.min.js"></script>
-
-<!-- App js -->
-<script src="assets/js/jquery.core.js"></script>
-<script src="assets/js/jquery.app.js"></script>
 <!-- jQuery  -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
@@ -145,32 +50,13 @@
     });
 </script>
 
-<!-- jQuery  -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/waves.js"></script>
-<script src="assets/js/jquery.slimscroll.js"></script>
-<script src="assets/js/jquery.scrollTo.min.js"></script>
-
-<!-- Jquery filer js -->
-<script src="../plugins/jquery.filer/js/jquery.filer.min.js"></script>
-
-<!-- Bootstrap fileupload js -->
-<script src="../plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
-<!-- page specific js -->
-<script src="assets/pages/jquery.fileuploads.init.js"></script>
-
-<!-- App js -->
-<script src="assets/js/jquery.core.js"></script>
-<script src="assets/js/jquery.app.js"></script>
 
 
-<!-- Jquery filer css -->
-<link href="../plugins/jquery.filer/css/jquery.filer.css" rel="stylesheet" />
-<link href="../plugins/jquery.filer/css/themes/jquery.filer-dragdropbox-theme.css" rel="stylesheet" />
 
-<!-- Bootstrap fileupload css -->
-<link href="../plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" />
+<!-- IMPORT INDEX.HTML -->
+
+<!-- C3 charts css -->
+<link href="../plugins/c3/c3.min.css" rel="stylesheet" type="text/css"  />
 
 <!-- App css -->
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -181,23 +67,6 @@
 <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
 <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
 
-<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-<![endif]-->
-
-<script src="assets/js/modernizr.min.js"></script>
-
-<!-- App css -->
-<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link href="assets/css/core.css" rel="stylesheet" type="text/css" />
-<link href="assets/css/components.css" rel="stylesheet" type="text/css" />
-<link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
-<link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
-<link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
-<link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
 
 <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -207,6 +76,9 @@
 <![endif]-->
 
 <script src="assets/js/modernizr.min.js"></script>
+
+
+<!-- IMPORTS FORM.ELEMENTS.HTML -->
 
 <!-- App css -->
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -227,32 +99,23 @@
 <script src="assets/js/modernizr.min.js"></script>
 
 
-<!-- INDEX:HTML--->
-<!-- jQuery  -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/waves.js"></script>
-<script src="assets/js/jquery.slimscroll.js"></script>
-<script src="assets/js/jquery.scrollTo.min.js"></script>
 
-<!-- Counter js  -->
-<script src="../plugins/waypoints/jquery.waypoints.min.js"></script>
-<script src="../plugins/counterup/jquery.counterup.min.js"></script>
+<!-- IMPORTS UI-CHECKBOX-RADIO.HTML -->
 
-<!--C3 Chart-->
-<script type="text/javascript" src="../plugins/d3/d3.min.js"></script>
-<script type="text/javascript" src="../plugins/c3/c3.min.js"></script>
+ <!-- App css -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/core.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
 
-<!--Echart Chart-->
-<script src="../plugins/echart/echarts-all.js"></script>
+<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
 
-<!-- Dashboard init -->
-<script src="assets/pages/jquery.dashboard.js"></script>
-
-<!-- App js -->
-<script src="assets/js/jquery.core.js"></script>
-<script src="assets/js/jquery.app.js"></script>
-
-
-
-
+<script src="assets/js/modernizr.min.js"></script>
