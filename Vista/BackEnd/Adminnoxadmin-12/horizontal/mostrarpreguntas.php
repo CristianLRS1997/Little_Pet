@@ -40,7 +40,7 @@
                         Estas son las preguntas que realizo.
                     </p>
 
-                   <?php echo preguntaController::mostrar();?>
+                   <?php echo preguntaController::mostrar();?> bg
                 </div>
             </div>
 

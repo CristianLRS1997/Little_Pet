@@ -14,14 +14,17 @@ if(!empty($_GET['action'])){
 
 class comentarioController
 {
+    /**
+     * @param $action
+     */
     static function main($action){
         if ($action == "crear"){
             comentarioController::crear();
-        }/*else if ($action == "editar"){
+        }else if ($action == "editar"){
              comentarioController::editar();
-        }else if ($action == "buscarID"){
-             comentarioController::buscarID(1);
-        }*/
+        }else if ($action == "mostrar"){
+             comentarioController::mostrar();
+        }
     }
 
     /**
@@ -65,6 +68,24 @@ class comentarioController
 
             header("Location: ../Vista/pages/comentario.php?respuesta=error");
         }
+
+
+
+    }
+
+     static public function mostrar()
+    {
+            $arrcome = Comentario::getAll();
+            $htmlelement = "<br>";
+            $htmlelement = "<h1>";
+
+            foreach ($arrcome as $valor){
+
+
+
+
+            }
+
 
 
 

@@ -157,7 +157,7 @@ class Respuesta extends db_abstract_class
 
     public function editar()
     {
-        $this-> updateRow("UPDATE littlepet.respuesta SET Respuesta = ? ,Pregunta_IdPregunta=? ,Adopcion_IdAdopcion=?",array(
+        $this-> updateRow("UPDATE  littlepet.respuesta SET Respuesta = ? ,Pregunta_IdPregunta=? ,Adopcion_IdAdopcion=?",array(
             $this->Respuesta,
             $this-> Pregunta_IdPregunta,
             $this -> Adopcion_IdAdopcion,
@@ -176,4 +176,5 @@ class Respuesta extends db_abstract_class
         }
 
     }
+
 }
