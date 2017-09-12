@@ -17,6 +17,11 @@ if (!empty($_SESSION['idUsuario'])){
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/LogoLittle.png">
 
+<<<<<<< HEAD
+=======
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+>>>>>>> parent of 5b47b2d... Sesiones
 
     <!-- Sweet Alert -->
     <link href="../plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
