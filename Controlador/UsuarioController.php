@@ -64,7 +64,7 @@ class UsuarioController
             var_dump($arrayUsuario);
             $Usuario = new Usuario($arrayUsuario);
             $Usuario->insertar();
-            header("Location: ../Vista/BackEnd/Adminnoxadmin-12/horizontal/registroUsuario.php?respuesta=correcto");
+            header("Location: ../Vista/BackEnd/Adminnoxadmin-12/horizontal/login.php?respuesta=correcto");
 
         } catch (Exception $e) {
 

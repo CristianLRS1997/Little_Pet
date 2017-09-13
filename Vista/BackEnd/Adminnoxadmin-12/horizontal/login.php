@@ -39,7 +39,7 @@ if (!empty($_SESSION['idUsuario'])){
 <body class="bg-accpunt-pages">
 
 <!-- HOME -->
-<section>
+<section style="background-color: rgba(249,148,76,0.82)">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -63,7 +63,7 @@ if (!empty($_SESSION['idUsuario'])){
                                     <div class="form-group m-b-20">
                                         <div class="col-xs-12">
                                             <label for="emailaddress">Email</label>
-                                            <input class="form-control" id="Email" name="Email" type="email" id="emailaddress" required="" placeholder="xxx@xxx.com">
+                                            <input class="form-control" style="background-color: #FEF9E7" id="Email" name="Email" type="email" id="emailaddress" required="" placeholder="xxx@xxx.com">
                                         </div>
                                     </div>
 
