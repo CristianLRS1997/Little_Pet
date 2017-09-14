@@ -39,10 +39,10 @@ class DomicilioController
             $arrayDomicilio['Ciudad_IdCiudad'] = $_POST['Ciudad_Ciudad'];
             $Domicilio = new Domicilio($arrayDomicilio);
             $Domicilio->insertar();
-            header("Location: ../../../../horizontal/perfilUsuario.php?respuesta=correcto");
+            header("Location: ../../../../horizontal/registroDomicilio.php?respuesta=correcto");
         } catch (Exception $e) {
             //var_dump($e);
-            header("Location: ../../../../horizontal/perfilUsuario.php?respuesta=error");
+            header("Location: ../../../../horizontal/registroDomicilio.php?respuesta=error");
         }
     }
 
