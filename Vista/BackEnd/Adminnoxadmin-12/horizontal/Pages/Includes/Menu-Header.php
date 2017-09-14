@@ -78,7 +78,7 @@
                             <li class="text-center">
                                 <h5>Hola, <?php echo $_SESSION["DataUser"]["Nombres"] ?></h5>
                             </li>
-                            <li><a href="javascript:void(0)"><i class="dripicons-user m-r-10"></i> Profile</a></li>
+                            <li><a href="perfilUsuario.php"><i class="dripicons-user m-r-10"></i> Perfil</a></li>
                             <li><a href="javascript:void(0)"><i class="dripicons-mail m-r-10"></i> <span class="badge badge-success pull-right">5</span> Messages</a></li>
                             <li><a href="javascript:void(0)"><i class="dripicons-gear m-r-10"></i> Settings</a></li>
                             <li><a href="javascript:void(0)"><i class="dripicons-lock m-r-10"></i> Lock screen</a></li>

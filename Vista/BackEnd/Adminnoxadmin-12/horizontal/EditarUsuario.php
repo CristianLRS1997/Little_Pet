@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (empty($_SESSION["DataUser"]["IdUsuario"])){
+    header("Location: login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,40 +46,47 @@
                                 <p class="m-b-0">Edita para adoptar o dar en adopcion</p>
                             </div>
                             <div class="account-content">
-                                <form class="form-horizontal" method="post" action="../../../../Controlador/UsuarioController.php?action=crear">
+                                <?php
+                                  $IdUsuario = $_GET["IdUsuario"];
+                                 $_SESSION["DataUser"]["IdUsuario"] = $IdUsuario;
+                                  $usuario = Usuario::buscarForId($IdUsuario);
+
+                                ?>
+
+                                <form class="form-horizontal" method="post" action="../../../../Controlador/UsuarioController.php?action=editar">
 
                                     <div class="form-group m-b-20">
                                         <div class="col-xs-12">
                                             <label for="Nombres">Nombre</label>
-                                            <input class="form-control" type="TEXT" id="Nombres" name="Nombres" required="" placeholder="Ingrese Nombres">
+                                            <input value="<?php echo $usuario->getNombres();?>" class="form-control" type="TEXT" id="Nombres" name="Nombres" required="" placeholder="Ingrese Nombres">
                                         </div>
                                     </div>
 
                                     <div class="form-group m-b-20">
                                         <div class="col-xs-12">
                                             <label for="Apellidos">Apellidos</label>
-                                            <input class="form-control" type="TEXT" id="Apellidos" name="Apellidos" required="required" placeholder="Ingrese Aprellidos">
+                                            <input value="<?php echo $usuario->getApellidos();?>" class="form-control" type="TEXT" id="Apellidos" name="Apellidos" required="required" placeholder="Ingrese Aprellidos">
                                         </div>
                                     </div>
 
                                     <div class="form-group m-b-20">
                                         <div class="col-xs-12">
                                             <label for="Email">Email</label>
-                                            <input class="form-control" type="email" id="Email" name="Email" required="" placeholder="xxx@xxx.com">
+                                            <input  value="<?php echo $usuario->getEmail();?>" class="form-control" type="email" id="Email" name="Email" required="" placeholder="xxx@xxx.com">
                                         </div>
                                     </div>
 
                                     <div class="form-group m-b-20">
                                         <div class="col-xs-12">
                                             <label for="celular">Celular</label>
-                                            <input class="form-control" type="number" id="Celular" name="Celular" minlength="10" maxlength="12" required="" placeholder="ingresa tu Nuemero Celular ">
+                                            <input value="<?php echo $usuario->getCelular();?>" class="form-control" type="number" id="Celular" name="Celular" minlength="10" maxlength="12" required="" placeholder="ingresa tu Nuemero Celular ">
                                         </div>
                                     </div>
 
                                     <div class="form-group m-b-20">
                                         <div class="col-xs-12">
                                             <label for="Contrasena">Contraseña</label>
-                                            <input class="form-control" type="password" required="" id="Contrasena" name="Contrasena"  placeholder="Ingresa tu Contraseña">
+                                            <input value="<?php echo $usuario->getContrasena();?>" class="form-control" type="password" required="" id="Contrasena" name="Contrasena"  placeholder="Ingresa tu Contraseña">
                                         </div>
                                     </div>
 
@@ -80,17 +94,15 @@
                                     <div class="form-group m-b-20">
                                         <div class="col-xs-12">
                                             <label for="Fecha_Nacimiento">Fecha_Nacimiento</label>
-                                            <input class="form-control" type="date" required="" id="Fecha_Nacimiento" name="Fecha_Nacimiento"  placeholder="Ingresa tu Fecha de Nacimiento">
+                                            <input  value="<?php echo $usuario->getFechaNacimiento();?>" class="form-control" type="date" required="" id="Fecha_Nacimiento" name="Fecha_Nacimiento"  placeholder="Ingresa tu Fecha de Nacimiento">
                                         </div>
                                     </div>
 
 
                                     <div class="form-group text-center m-t-10">
                                         <div class="col-xs-12">
-                                            <button
-                                                <i class="mdi mdi-account-settings-variant m-r-5" ></i> Editar Perfil
-                                            </button>
-                                            <!--<button class="btn btn-success btn-rounded w-md waves-effect waves-light" type="submit">Enviar</button>-->
+
+                                            <button class="btn btn-success btn-rounded w-md waves-effect waves-light" type="submit">Enviar</button>
                                         </div>
                                     </div>
 
