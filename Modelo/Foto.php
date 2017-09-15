@@ -95,7 +95,7 @@ class Foto extends db_abstract_class
         $this->SujetoAdopcion = $SujetoAdopcion;
     }
 
-    protected static function buscarForId($id)
+    public static function buscarForId($id)
     {
         $Client = new Foto();
         if ($id  > 0){

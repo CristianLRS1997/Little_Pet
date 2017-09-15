@@ -1,6 +1,8 @@
 <?php
 session_start();
 require_once (__DIR__.'/../Modelo/SujetoAdopcion.php');
+require_once (__DIR__.'/../Modelo/Usuario.php');
+require_once (__DIR__.'/../Modelo/Foto.php');
 
 if(!empty($_GET['action'])){
     sujetoAdopcionController::main($_GET['action']);
@@ -44,4 +46,46 @@ class sujetoAdopcionController
         }
     }
 
+    static public function adminTableUsuario()
+    {
+        $arrUsuario = SujetoAdopcion::getAll(); /*  */
+        $tmpUsuario = new SujetoAdopcion();
+        $arrColumnas = [/*"idUsuario",*//*"TipoDocumento",*/
+            "    ",""];
+        $htmlTable = "<thead>";
+        $htmlTable .= "<tr>";
+        foreach ($arrColumnas as $NameColumna) {
+            $htmlTable .= "<th>" . $NameColumna . "</th>";
+        }
+        $htmlTable .= "<th></th>";
+        $htmlTable .= "</tr>";
+        $htmlTable .= "</thead>";
+
+        $htmlTable .= "<tbody>";
+        foreach ($arrUsuario as $ObjUsuario) {
+            $htmlTable .= "<tr>";
+
+            $esta = Usuario::buscarForId($ObjUsuario->getDueno());
+            $htmlTable .= "<tr align='center'>"  ."<img width='200' heigth='200' src='archivos/".$esta->getFoto(). "'>"."</tr>";
+            $htmlTable .=  "<p>"."Dueño: ".  $esta->getNombres()."</p>" ;
+            $htmlTable .= "<p>"."Nombre: ". $ObjUsuario->getNombre()."</p>" ;
+            $htmlTable .= "<p>"."Genero: ". $ObjUsuario->getGenero()."</p>" ;
+            $htmlTable .=  "<p>". $ObjUsuario->getAnos() . " Años" ."</p>"."</tr>"  ;
+
+
+            $icons = "";
+
+            $icons .= "<div class=\"div-table-cell\" style=\"width: 9%;\"><a class=\"btn btn-success\" href='Details-animal.php?IdSujetoAdopcion=".$ObjUsuario->getIdSujetoAdopcion()."'>Ver<i class=\"zmdi zmdi-refresh\"></i></a></div>";
+
+
+
+
+            $htmlTable .=  $icons  ;
+            $htmlTable .= "</tr>";
+
+
+        }
+        $htmlTable .= "</tbody>";
+        return $htmlTable;
+}
 }

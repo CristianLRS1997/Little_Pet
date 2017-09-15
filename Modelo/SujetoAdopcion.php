@@ -308,7 +308,30 @@ class SujetoAdopcion extends db_abstract_class
 
     public static function buscarForId($id)
     {
-        // TODO: Implement buscarForId() method.
+        $Client = new SujetoAdopcion();
+        if ($id  > 0){
+            $getrow = $Client->getRow("SELECT * FROM littlepet.sujetoadopcion WHERE IdSujetoAdopcion =?", array($id));
+            $Client->IdSujetoAdopcion = $getrow['IdSujetoAdopcion'];
+            $Client->Genero = $getrow['Genero'];
+            $Client->Anos = $getrow['Anos'];
+            $Client->Meses = $getrow['Meses'];
+            $Client->Nombre = $getrow['Nombre'];
+            $Client->Tamano = $getrow['Tamano'];
+            $Client->Esterilizado = $getrow['Esterilizado'];
+            $Client->Vacunas = $getrow['Vacunas'];
+            $Client->Descripcion = $getrow['Descripcion'];
+            $Client->Dueno = $getrow['Dueno'];
+            $Client->Raza = $getrow['Raza'];
+            $Client->Ciudad = $getrow['Ciudad'];
+
+
+            $Client->Disconnect();
+            return $Client;
+        }else{
+            return NULL;
+
+
+        }
     }
 
     public static function buscar($query)
