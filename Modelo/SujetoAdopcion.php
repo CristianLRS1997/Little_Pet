@@ -293,12 +293,34 @@ class SujetoAdopcion extends db_abstract_class
 
     public static function buscar($query)
     {
-        // TODO: Implement buscar() method.
+        $arrSujeto = array();
+        $tmp = new SujetoAdopcion();
+        $getRows = $tmp->getRows($query);
+
+        foreach ($getRows as $valor){
+            $sujeto = new SujetoAdopcion();
+            $sujeto->IdSujetoAdopcion = $valor['IdSujetoAdopcion'];
+            $sujeto->Genero = $valor['Genero'];
+            $sujeto->Anos = $valor['Anos'];
+            $sujeto->Meses = $valor['Meses'];
+            $sujeto->Nombre = $valor['Nombre'];
+            $sujeto->Tamano = $valor['Tamano'];
+            $sujeto->Esterilizado = $valor['Esterilizado'];
+            $sujeto->Vacunas = $valor['Vacunas'];
+            $sujeto->Descripcion = $valor['Descripcion'];
+            $sujeto->Dueno = $valor['Dueno'];
+            $sujeto->Raza = $valor['Raza'];
+            $sujeto->Ciudad = $valor['Ciudad'];
+            array_push($arrSujeto, $sujeto);
+        }
+        $tmp->Disconnect();
+        return $arrSujeto;
+
     }
 
     public static function getAll()
     {
-        // TODO: Implement getAll() method.
+        return SujetoAdopcion::buscar("SELECT * FROM littlepet.sujetoadopcion");
     }
 
     public function insertar()
