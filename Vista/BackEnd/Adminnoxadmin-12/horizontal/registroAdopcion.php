@@ -56,8 +56,8 @@ if (empty($_SESSION["DataUser"]["IdUsuario"])){
             <br>
 
             <p class="font-15 m-b-20" align="justify">
-                Llena este simple formulario con los datos de tu amigo que vas a dar en adopción, pronto te llegaran
-                ofertas de adopción para que el consiga el hogar que merece con calor de familia.
+                Llena este simple formulario con los datos de tu amigo que vas a apadrinar, pronto te llegaran
+                la notificación de respuesta de tu solicitud, para que 
             </p>
 
             <br>

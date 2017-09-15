@@ -118,29 +118,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#"><i class="fi-paper"></i>ADOPTAR</a>
-                        <ul class="submenu megamenu">
-                            <li>
-                                <ul>
-                                    <li><a href="form-elements.html">Form Elements</a></li>
-                                    <li><a href="form-advanced.html">Form Advanced</a></li>
-                                    <li><a href="form-layouts.html">Form Layouts</a></li>
-                                    <li><a href="form-validation.html">Form Validation</a></li>
-                                    <li><a href="form-pickers.html">Form Pickers</a></li>
-                                    <li><a href="form-wizard.html">Form Wizard</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul>
-                                    <li><a href="form-mask.html">Form Masks</a></li>
-                                    <li><a href="form-summernote.html">Summernote</a></li>
-                                    <li><a href="form-wysiwig.html">Wysiwig Editors</a></li>
-                                    <li><a href="form-typeahead.html">Typeahead</a></li>
-                                    <li><a href="form-x-editable.html">X Editable</a></li>
-                                    <li><a href="form-uploads.html">Multiple File Upload</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <a href="../../Adminnoxadmin-12/horizontal/registroAdopcion.php"><i class="fi-paper"></i>ADOPTAR</a>
                     </li>
 
                     <li class="has-submenu">
