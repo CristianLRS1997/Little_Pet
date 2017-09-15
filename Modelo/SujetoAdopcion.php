@@ -25,6 +25,7 @@ class SujetoAdopcion extends db_abstract_class
     private $Raza;
     private $Ciudad;
     private $Alimentacion;
+    private $Foto;
     private $Estado;
 
 
@@ -49,6 +50,7 @@ class SujetoAdopcion extends db_abstract_class
             $this->Raza = "";
             $this->Ciudad = "";
             $this->Alimentacion = "";
+            $this->Foto = "";
             $this->Estado = "";
         }
     }
@@ -271,6 +273,24 @@ class SujetoAdopcion extends db_abstract_class
     /**
      * @return string
      */
+    public function getFoto()
+    {
+        return $this->Foto;
+    }
+
+    /**
+     * @param string $Foto
+     */
+    public function setFoto($Foto)
+    {
+        $this->Foto = $Foto;
+    }
+
+
+
+    /**
+     * @return string
+     */
     public function getEstado()
     {
         return $this->Estado;
@@ -288,22 +308,69 @@ class SujetoAdopcion extends db_abstract_class
 
     public static function buscarForId($id)
     {
-        // TODO: Implement buscarForId() method.
+        $Client = new SujetoAdopcion();
+        if ($id  > 0){
+            $getrow = $Client->getRow("SELECT * FROM littlepet.sujetoadopcion WHERE IdSujetoAdopcion =?", array($id));
+            $Client->IdSujetoAdopcion = $getrow['IdSujetoAdopcion'];
+            $Client->Genero = $getrow['Genero'];
+            $Client->Anos = $getrow['Anos'];
+            $Client->Meses = $getrow['Meses'];
+            $Client->Nombre = $getrow['Nombre'];
+            $Client->Tamano = $getrow['Tamano'];
+            $Client->Esterilizado = $getrow['Esterilizado'];
+            $Client->Vacunas = $getrow['Vacunas'];
+            $Client->Descripcion = $getrow['Descripcion'];
+            $Client->Dueno = $getrow['Dueno'];
+            $Client->Raza = $getrow['Raza'];
+            $Client->Ciudad = $getrow['Ciudad'];
+
+
+            $Client->Disconnect();
+            return $Client;
+        }else{
+            return NULL;
+
+
+        }
     }
 
     public static function buscar($query)
     {
-        // TODO: Implement buscar() method.
+        $arrSujeto = array();
+        $tmp = new SujetoAdopcion();
+        $getRows = $tmp->getRows($query);
+
+        foreach ($getRows as $valor){
+            $sujeto = new SujetoAdopcion();
+            $sujeto->IdSujetoAdopcion = $valor['IdSujetoAdopcion'];
+            $sujeto->Genero = $valor['Genero'];
+            $sujeto->Anos = $valor['Anos'];
+            $sujeto->Meses = $valor['Meses'];
+            $sujeto->Nombre = $valor['Nombre'];
+            $sujeto->Tamano = $valor['Tamano'];
+            $sujeto->Esterilizado = $valor['Esterilizado'];
+            $sujeto->Vacunas = $valor['Vacunas'];
+            $sujeto->Descripcion = $valor['Descripcion'];
+            $sujeto->Dueno = $valor['Dueno'];
+            $sujeto->Raza = $valor['Raza'];
+            $sujeto->Ciudad = $valor['Ciudad'];
+            $sujeto->Alimentacion = $valor['Alimentacion'];
+            $sujeto->Foto = $valor = $valor['Foto'];
+            array_push($arrSujeto, $sujeto);
+        }
+        $tmp->Disconnect();
+        return $arrSujeto;
+
     }
 
     public static function getAll()
     {
-        // TODO: Implement getAll() method.
+        return SujetoAdopcion::buscar("SELECT * FROM littlepet.sujetoadopcion");
     }
 
     public function insertar()
     {
-        $this->insertRow("INSERT INTO littlepet.sujetoadopcion VALUES ('NULL', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", array(
+        $this->insertRow("INSERT INTO littlepet.sujetoadopcion VALUES ('NULL', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", array(
                 $this->Genero,
                 $this->Anos,
                 $this->Meses,
@@ -316,6 +383,7 @@ class SujetoAdopcion extends db_abstract_class
                 $this->Raza,
                 $this->Ciudad,
                 $this->Alimentacion,
+                $this->Foto,
                 $this->Estado
 
 

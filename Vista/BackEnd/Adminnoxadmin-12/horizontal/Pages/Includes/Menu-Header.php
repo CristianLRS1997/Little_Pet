@@ -79,7 +79,7 @@
                                 <h5>Hola, <?php echo $_SESSION["DataUser"]["Nombres"] ?></h5>
                             </li>
                             <li><a href="javascript:void(0)"><i class="dripicons-user m-r-10"></i> Profile</a></li>
-                            <li><a href="javascript:void(0)"><i class="dripicons-mail m-r-10"></i> <span class="badge badge-success pull-right">5</span> Messages</a></li>
+                            <li><a href="adminSujetos.php"><i class="mdi mdi-paw m-r-10"></i> Mis Huellitas</a></li>
                             <li><a href="javascript:void(0)"><i class="dripicons-gear m-r-10"></i> Settings</a></li>
                             <li><a href="javascript:void(0)"><i class="dripicons-lock m-r-10"></i> Lock screen</a></li>
                             <li><a href="../../../../Controlador/UsuarioController.php?action=CerrarSession"><i class="dripicons-power m-r-10"></i> Salir</a></li>
@@ -144,7 +144,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="../../Adminnoxadmin-12/horizontal/registroSujeto.php"><i class="fi-paper-stack"></i>DAR EN ADOPCÍON</a>
+                        <a href="../../Adminnoxadmin-12/horizontal/IndexSujeto.php"><i class="fi-paper-stack"></i>DAR EN ADOPCÍON</a>
                     </li>
 
                     <li class="has-submenu">

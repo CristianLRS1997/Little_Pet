@@ -15,18 +15,7 @@ class adopcionController
             adopcionController::crear();
         }else if ($action == "editar"){
             adopcionController::editar();
-        }else if ($action == "selectEspecialistas"){
-            adopcionController::selectEspecialista();
-        }else if ($action == "adminTableEspecialistas"){
-            adopcionController::adminTableEspecialistas();
-        }else if ($action == "InactivarEspecialista"){
-            adopcionController::CambiarEstado("Inactivo");
-        }else if ($action == "ActivarEspecialista"){
-            adopcionController::CambiarEstado("Activo");
         }
-        /*else if ($action == "buscarID"){
-            EspecialistaController::buscarID(1);
-        }*/
     }
 
     static public function crear (){
