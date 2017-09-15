@@ -40,7 +40,28 @@ $_SESSION["user"]=$_SESSION["DataUser"]["IdUsuario"];
 <div class="wrapper" style="background-color: #FDFEFE">
     <div class="container">
 
-        <h3 class="text-warning">MIS HUELLITAS EN ADOPCIÓN</h3>
+        <div style="background-color: #F6F6F7" >
+
+            <br>
+
+            <br>
+
+                <h3 class="text-center text-warning">¿TIENES UNA MASCOTA PARA DAR EN ADOPCIÓN?</h3>
+
+            <div class="col-md-2 center-page" >
+                <button onclick="location.href='IndexSujeto.php'" type="button" class="btn btn-block waves-effect waves-light font-15" onmouseout="this.style.background ='#F5B041'"
+                        onmouseover="this.style.background ='#F77C10'" style= "background-color: #F5B041 ; color: #fdfefe;
+                        border-radius: 5px">Publicala aquí</button>
+            </div>
+
+            <br>
+
+            <br>
+
+        </div>
+
+
+        <h2 style="color: #F77C10">MIS HUELLITAS EN ADOPCIÓN</h2>
 
     </div> <!-- end container -->
 </div>
