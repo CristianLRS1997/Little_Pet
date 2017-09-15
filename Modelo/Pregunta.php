@@ -15,7 +15,7 @@ class Pregunta extends  db_abstract_class
     private $Respuesta3;
     private $Respuesta4;
     private $Estado ;
-    private $SujetoAdopcion ;
+
 
 
 
@@ -34,7 +34,7 @@ class Pregunta extends  db_abstract_class
         $this->Respuesta3 = "";
         $this->Respuesta4 = "";
         $this->Estado = "";
-        $this->SujetoAdopcion = "";
+
     }
     }
     /* Metodo destructor cierra la conexion. */
@@ -158,18 +158,6 @@ class Pregunta extends  db_abstract_class
     /**
      * @return string
      */
-    public function getSujetoAdopcion()
-    {
-        return $this->SujetoAdopcion;
-    }
-
-    /**
-     * @param string $SujetoAdopcion
-     */
-    public function setSujetoAdopcion($SujetoAdopcion)
-    {
-        $this->SujetoAdopcion = $SujetoAdopcion;
-    }
 
 
     public  static function buscarForId($id)
@@ -185,7 +173,7 @@ class Pregunta extends  db_abstract_class
             $preg -> Respuesta3 = $getrow['Respuesta3'];
             $preg -> Respuesta4 = $getrow['Respuesta4'];
             $preg -> Estado = $getrow['Estado'];
-            $preg -> SujetoAdopcion = $getrow['SujetoAdopcion'];
+
             $preg->Disconnect();
             return $preg;
 
@@ -212,7 +200,7 @@ class Pregunta extends  db_abstract_class
           $preg -> Respuesta3 = $valor['Respuesta3'];
           $preg -> Respuesta4 = $valor['Respuesta4'];
           $preg -> Estado = $valor['Estado'];
-          $preg -> SujetoAdopcion = $valor['SujetoAdopcion'];
+
           array_push($arrpreg, $preg);
       }
       $tmp->Disconnect();
@@ -221,19 +209,19 @@ class Pregunta extends  db_abstract_class
 
     public static function getAll()
     {
-        return Pregunta::buscar("SELECT * FROM littlepet.pregunta");
+        return Pregunta::buscar("SELECT * FROM littlepet.pregunta ");
     }
 
     public function insertar()
     {
-        $this-> insertRow("INSERT INTO littlepet.pregunta (IdPregunta,Enunciado,Respuesta1,Respuesta2,Respuesta3,Respuesta4,Estado,SujetoAdopcion) VALUES ('NULL',?,?,?,?,?,?,?)",array(
+        $this-> insertRow("INSERT INTO littlepet.pregunta (IdPregunta,Enunciado,Respuesta1,Respuesta2,Respuesta3,Respuesta4,Estado) VALUES ('NULL',?,?,?,?,?,?)",array(
             $this->Enunciado,
             $this-> Respuesta1,
             $this -> Respuesta2,
             $this-> Respuesta3,
             $this-> Respuesta4,
             $this-> Estado,
-            $this-> SujetoAdopcion,
+
 
         ));
         $this->Disconnect();
@@ -242,14 +230,14 @@ class Pregunta extends  db_abstract_class
 
     public function editar()
     {
-        $this-> updateRow("UPDATE littlepet.pregunta SET Enunciado = ? ,Respuesta1=? ,Respuesta2=?, Respuesta3=?,Respuesta4=?,Estado=?,SujetoAdopcion=?",array(
+        $this-> updateRow("UPDATE littlepet.pregunta SET Enunciado = ? ,Respuesta1=? ,Respuesta2=?, Respuesta3=?,Respuesta4=?,Estado=?",array(
             $this->Enunciado,
             $this-> Respuesta1,
             $this -> Respuesta2,
             $this-> Respuesta3,
             $this-> Respuesta4,
             $this-> Estado,
-            $this-> SujetoAdopcion
+
         ));
         $this->Disconnect();
     }

@@ -7,7 +7,7 @@ require_once (__DIR__.'/../Modelo/Respuesta.php');
  * Time: 11:26 PM
  */
 if(!empty($_GET['action'])){
-    preguntaController::main($_GET['action']);
+    respuestaController::main($_GET['action']);
 }else{
     echo "No se encontro ninguna accion...";
 }
@@ -26,11 +26,11 @@ class respuestaController
         try{
             $arrresp = array();
             $arrresp['Respuesta']=$_POST['Respuesta'];
-            $arrresp['Pregunta_IdPregunta']=$_POST['Pregunta_IdPregunta'];
-            $arrresp['Adopcion_IdAdopcion']=$_POST['Adopcion_IdAdopcion'];
+            $arrresp['Pregunta_IdPregunta']= $_POST['Pregunta_IdPregunta'];
+            $arrresp['Adopcion_IdAdopcion']= "1";
             $resp = new Respuesta($arrresp);
             $resp->insertar();
-            header("Location: ../Vista/BackEnd/Adminnoaxadmin-12/horizontal/Respuesta.php?respuesta=correcto");
+            header("Location: ../Vista/BackEnd/Adminnoaxadmin-12/horizontal/mostrarpreguntas.php?respuesta=correcto");
         }catch (Exception $e){
            var_dump($e);
 
@@ -39,10 +39,20 @@ class respuestaController
 
      static public function mostrar()
     {
-          
+
+            $arrrespuesta = Respuesta::getAll();
+            $htmlelement = "<h1>";
+            $htmlelement = "<p>";
 
 
+            foreach ($arrrespuesta as $valor ){
 
+                $htmlelement .= "<h1>".$valor->getPregunta()."</h1>";
+
+
+            }
+
+return $htmlelement;
 
     }
 

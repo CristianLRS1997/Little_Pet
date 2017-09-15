@@ -81,12 +81,16 @@ class comentarioController
 
             foreach ($arrcome as $valor){
 
+                $htmlelement .= "<h1>".$valor->getUsuario()."</h1>";
+              $htmlelement .= "<h1>".$valor->getDescripcion()."</h1>";
+              $htmlelement .= "<h1>".$valor->getRespuesta()."</h1>";
+              $htmlelement .= "<br>";
 
 
 
             }
 
-
+          return $htmlelement;
 
 
     }

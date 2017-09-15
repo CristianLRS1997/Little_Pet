@@ -143,7 +143,7 @@ class Respuesta extends db_abstract_class
 
     public function insertar()
     {
-        $this-> insertRow("INSERT INTO littlepet.respuesta VALUES ('NULL',?,?,?)",array(
+        $this-> insertRow("INSERT INTO littlepet.respuesta (Respuesta,Pregunta_IdPregunta,Adopcion_IdAdopcion)VALUES (?,?,?)",array(
             $this->Respuesta,
             $this-> Pregunta_IdPregunta,
             $this -> Adopcion_IdAdopcion,
@@ -176,5 +176,7 @@ class Respuesta extends db_abstract_class
         }
 
     }
+
+
 
 }
