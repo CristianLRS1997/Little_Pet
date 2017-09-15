@@ -40,6 +40,8 @@ $_SESSION["user"]=$_SESSION["DataUser"]["IdUsuario"];
 <div class="wrapper" style="background-color: #FDFEFE">
     <div class="container">
 
+        <h3 class="text-warning">MIS HUELLITAS EN ADOPCIÓN</h3>
+
     </div> <!-- end container -->
 </div>
 <!-- end wrapper -->

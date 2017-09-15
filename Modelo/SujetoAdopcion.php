@@ -25,6 +25,7 @@ class SujetoAdopcion extends db_abstract_class
     private $Raza;
     private $Ciudad;
     private $Alimentacion;
+    private $Foto;
     private $Estado;
 
 
@@ -49,6 +50,7 @@ class SujetoAdopcion extends db_abstract_class
             $this->Raza = "";
             $this->Ciudad = "";
             $this->Alimentacion = "";
+            $this->Foto = "";
             $this->Estado = "";
         }
     }
@@ -271,6 +273,24 @@ class SujetoAdopcion extends db_abstract_class
     /**
      * @return string
      */
+    public function getFoto()
+    {
+        return $this->Foto;
+    }
+
+    /**
+     * @param string $Foto
+     */
+    public function setFoto($Foto)
+    {
+        $this->Foto = $Foto;
+    }
+
+
+
+    /**
+     * @return string
+     */
     public function getEstado()
     {
         return $this->Estado;
@@ -311,6 +331,8 @@ class SujetoAdopcion extends db_abstract_class
             $sujeto->Dueno = $valor['Dueno'];
             $sujeto->Raza = $valor['Raza'];
             $sujeto->Ciudad = $valor['Ciudad'];
+            $sujeto->Alimentacion = $valor['Alimentacion'];
+            $sujeto->Foto = $valor = $valor['Foto'];
             array_push($arrSujeto, $sujeto);
         }
         $tmp->Disconnect();
@@ -325,7 +347,7 @@ class SujetoAdopcion extends db_abstract_class
 
     public function insertar()
     {
-        $this->insertRow("INSERT INTO littlepet.sujetoadopcion VALUES ('NULL', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", array(
+        $this->insertRow("INSERT INTO littlepet.sujetoadopcion VALUES ('NULL', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", array(
                 $this->Genero,
                 $this->Anos,
                 $this->Meses,
@@ -338,6 +360,7 @@ class SujetoAdopcion extends db_abstract_class
                 $this->Raza,
                 $this->Ciudad,
                 $this->Alimentacion,
+                $this->Foto,
                 $this->Estado
 
 

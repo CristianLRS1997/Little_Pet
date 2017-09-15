@@ -33,6 +33,7 @@ class sujetoAdopcionController
             $arraySujetoAdopcion['Raza'] = "1";
             $arraySujetoAdopcion['Ciudad'] = "1";
             $arraySujetoAdopcion['Alimentacion'] = $_POST['Alimentacion'];
+            $arraySujetoAdopcion['Foto'] = $_POST['Foto'];
             $arraySujetoAdopcion['Estado'] ="Activo";
             $sujetoAdopcion = new SujetoAdopcion ($arraySujetoAdopcion);
             $sujetoAdopcion->insertar();
