@@ -1,8 +1,9 @@
 <?php
 session_start();
 require_once (__DIR__.'/../Modelo/SujetoAdopcion.php');
-require_once (__DIR__.'/../Modelo/Usuario.php');
-require_once (__DIR__.'/../Modelo/Foto.php');
+require_once (__DIR__.'/../Vista/BackEnd/Adminnoxadmin-12/horizontal/Pages/apis/class.upload.php');
+
+
 
 if(!empty($_GET['action'])){
     sujetoAdopcionController::main($_GET['action']);
@@ -35,11 +36,30 @@ class sujetoAdopcionController
             $arraySujetoAdopcion['Raza'] = "1";
             $arraySujetoAdopcion['Ciudad'] = "1";
             $arraySujetoAdopcion['Alimentacion'] = $_POST['Alimentacion'];
-            $arraySujetoAdopcion['Foto'] = $_POST['Foto'];
             $arraySujetoAdopcion['Estado'] ="Activo";
+            /* Subir la Foto */
+            $archivos = new Upload($_FILES['file_profile']);
+            $NameArchivos = "";
+            if ($archivos->uploaded){
+                $archivos->file_new_name_body = date('H-M-s')."-".$archivos->file_src_name_body;
+                $NameArchivos =  date('H-M-s')."-".$archivos->file_src_name_body.".".$archivos->file_src_name_ext;
+                $archivos->Process('../Vista/BackEnd/Adminnoxadmin-12/horizontal/archivos');
+                if($archivos->processed){
+                    echo "Archivo Subido";
+                }else{
+                    echo "Archivo No Subido, Error en la carpeta..".$archivos->error;
+                }
+                $archivos->Clean();
+
+            }else{
+                echo "Error al subir el archivo...".$archivos->error;
+            }
+
+            $arraySujetoAdopcion['Foto'] = $NameArchivos;
+            var_dump($arraySujetoAdopcion);
             $sujetoAdopcion = new SujetoAdopcion ($arraySujetoAdopcion);
             $sujetoAdopcion->insertar();
-            header("Location: ../Vista/BackEnd/Adminnoxadmin-12/horizontal/registroSujeto.php ?respuesta=correcto");
+            header("Location: ../Vista/BackEnd/Adminnoxadmin-12/horizontal/index.php ?respuesta=correcto");
         } catch (Exception $e) {
             var_dump($e);
             // header("Location: ../Vista/pages/registroPaciente.php?respuesta=error");

@@ -370,7 +370,7 @@ class SujetoAdopcion extends db_abstract_class
 
     public function insertar()
     {
-        $this->insertRow("INSERT INTO littlepet.sujetoadopcion VALUES ('NULL', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", array(
+        $this->insertRow("INSERT INTO littlepet.sujetoadopcion (IdSujetoAdopcion, Genero, Anos,Meses, Nombre, Tamano, Esterilizado, Vacunas, Descripcion, Dueno, Raza, Ciudad, Alimentacion, Foto, Estado) VALUES ('NULL', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", array(
                 $this->Genero,
                 $this->Anos,
                 $this->Meses,

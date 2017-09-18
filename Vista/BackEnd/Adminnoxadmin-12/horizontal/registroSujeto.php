@@ -65,7 +65,7 @@ header("Location: login.php");
             <!-- Clickable Wizard -->
             <div class="row">
                 <div class="col-md-12">
-                    <form role="form" method="post" action="../../../../Controlador/sujetoAdopcionController.php?action=crear" >
+                    <form class="form-horizontal"  method="post" enctype="multipart/form-data" action="../../../../Controlador/sujetoAdopcionController.php?action=crear" >
 
                         <div class="row m-t-20" style="text-align: right">
                             <div class="col-xs-9" style="width: 83%" >
@@ -195,6 +195,17 @@ header("Location: login.php");
                         </div>
 
                         <br>
+
+                        <div class="form-group m-b-20">
+                            <div class="col-xs-12">
+                                <label for="Contrasena">Imagen</label>
+                                <input type="file" size="32" name="file_profile" value="" />
+                            </div>
+                        </div>
+
+                        <br>
+
+
 
                         <div class="form-group row">
                             <div class="col-sm-8 col-sm-offset-4">
