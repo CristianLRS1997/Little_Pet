@@ -109,17 +109,44 @@ class Adopcion extends db_abstract_class
 
     public static function buscarForId($id)
     {
-        // TODO: Implement buscarForId() method.
+        $ado = new Adopcion();
+        if ($id >0 ){
+            $getrow = $ado->getRow("SELECT * FROM  littlepet.adopcion WHERE IdAdopcion =?", array($id));
+            $ado -> IdAdopcion = $getrow['IdAdopcion'];
+            $ado -> Estado =$getrow['Estado'];
+            $ado -> Padrino = $getrow['Padrino'];
+            $ado -> SujetoAdopcion = $getrow['SujetoAdopcion'];
+
+            $ado->Disconnect();
+            return $ado
+                ;
+
+        }else{
+
+            return NULL;
+        }
     }
 
     public static function buscar($query)
     {
-        // TODO: Implement buscar() method.
+        $arrresp = array();
+        $tmp = new Adopcion();
+        $getrows = $tmp->getRows($query);
+        foreach ( $getrows as $valor) {
+            $resp = new Adopcion();
+            $resp -> IdAdopcion= $valor['IdAdopcion'];
+            $resp -> Estado = $valor['Estado'];
+            $resp -> Padrino = $valor['Padrino'];
+            $resp -> SujetoAdopcion = $valor['SujetoAdopcion'];
+            array_push($arrresp, $resp);
+        }
+        $tmp->Disconnect();
+        return $arrresp;
     }
 
     public static function getAll()
     {
-        // TODO: Implement getAll() method.
+        return Adopcion::buscar("SELECT * FROM littlepet.adopcion");
     }
 
     public function insertar()
