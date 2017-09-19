@@ -111,7 +111,7 @@ class Ciudad extends db_abstract_class
         $getrows = $tmp ->getRows($query);
         foreach ($getrows as $valor){
             $ciu = new Ciudad();
-            $ciu->IdCiudad= $valor['IdDepartamento'];
+            $ciu->IdCiudad= $valor['IdCiudad'];
             $ciu->Nombre= $valor['Nombre'];
             $ciu->Estado= $valor['Estado'];
             $ciu->Departamento_IdDepartamento= $valor['Departamento_IdDepartamento'];

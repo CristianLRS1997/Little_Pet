@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +26,23 @@
         <div class="row">
             <div class="col-sm-12">
 
+                <div id="alertas">
+                    <?php if(!empty($_GET["respuesta"]) && $_GET["respuesta"] == "correcto"){ ?>
+                        <div class="alert alert-success alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            La informacion del paciente se ha registrado correctamente. Puede administrar los pacientes desde <a href="adminPacientes.php" class="alert-link">Aqui</a> .
+                        </div>
+                    <?php } ?>
+                    <?php if(!empty($_GET["respuesta"]) && $_GET["respuesta"] == "errorXUsuario"){ ?>
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            No te puedes registrar con el correo <?php echo $_GET["correo"] ?>, porque ya existe .
+                        </div>
+                    <?php } ?>
+                </div>
+
+
+
                 <div class="wrapper-page">
 
                     <div class="account-pages">
@@ -39,7 +57,7 @@
                                 <p class="m-b-0">Registrate para adoptar o dar en adopcion</p>
                             </div>
                             <div class="account-content">
-                                <form class="form-horizontal" method="post" enctype="multipart/form-data" action="../../../../Controlador/UsuarioController.php?action=crear">
+                                <form id="frmUsuario" name="frmUsuario" class="form-horizontal" method="post" enctype="multipart/form-data" action="../../../../Controlador/UsuarioController.php?action=crear">
 
                                     <div class="form-group m-b-20">
                                         <div class="col-xs-12">

@@ -35,7 +35,8 @@ private $Ciudad_IdCiudad;
             $this->Estrato = "";
             $this->Estado ="";
             $this->Uuario_IdUsuario ="" ;
-            $this->Ciudad_IdCiudad ="";
+            $this->Ciudad_IdCiudad ="" ;
+
         }
     }
 
@@ -186,7 +187,18 @@ private $Ciudad_IdCiudad;
 
     public function insertar()
     {
-        // TODO: Implement insertar() method.
+        var_dump($this->Uuario_IdUsuario);
+        $this->insertRow("INSERT INTO littlepet.domicilio   VALUES (NULL, ?, ?, ?, ?,?,?,?)", array(
+                $this->Tipo_Domicilio,
+                $this->Barrio,
+                $this->Direccion,
+                $this->Estrato,
+                $this->Estado,
+                $this->Uuario_IdUsuario,
+                $this->Ciudad_IdCiudad
+            )
+        );
+        $this->Disconnect();
     }
 
     public function editar()

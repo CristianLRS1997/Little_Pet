@@ -54,7 +54,7 @@ if (!empty($_SESSION['idUsuario'])){
                                         <span><img src="assets/images/LogoLittleFrase.png" alt="" height="60"></span>
                                     </a>
                                 </h2>
-                                <h5 class="text-uppercase font-bold m-b-5 m-t-50">Iniciar Sesion </h5>
+                                <h5 class="text-uppercase font-bold m-b-5 m-t-50">Iniciar sesión  </h5>
 
                             </div>
                             <div class="account-content">
@@ -77,7 +77,7 @@ if (!empty($_SESSION['idUsuario'])){
 
                                     <div class="form-zgroup text-center m-t-10">
                                         <div class="col-xs-12">
-                                            <input class="btn btn-md btn-block btn-primary waves-effect waves-light" id="btnEnviar" value="Inciar Sesion" name="btnEnviar" type="submit">
+                                            <input class="btn btn-md btn-block btn-primary waves-effect waves-light" id="btnEnviar" value="Iniciar sesión " name="btnEnviar" type="submit">
                                         </div>
                                     </div>
 
@@ -88,7 +88,7 @@ if (!empty($_SESSION['idUsuario'])){
 
                                 <div class="row m-t-50">
                                     <div class="col-sm-12 text-center">
-                                        <p class="text-muted">Aun no tienes una cuenta? <a href="registroUsuario.php" class="text-dark m-l-5"><b>Registrate</b></a></p>
+                                        <p class="text-muted">Aun no tienes una cuenta? <a href="registroUsuario.php" class="text-dark m-l-5"><b> Regístrate</b></a></p>
                                     </div>
                                 </div>
 
@@ -121,7 +121,7 @@ if (!empty($_SESSION['idUsuario'])){
         })
             .done(function( msg ) {
                 console.log(msg);
-                if(msg == "1"){
+                if(msg == 1){
                     window.location.href = "Index.php";
                 }else{
                     swal(
@@ -129,7 +129,7 @@ if (!empty($_SESSION['idUsuario'])){
                             title: 'Error!',
                             text: ''+msg,
                             type: 'error',
-                            confirmButtonColor: '#f96a74',
+                            confirmButtonColor: '#e81a2d',
                             timer: 5000
                         }
                     );

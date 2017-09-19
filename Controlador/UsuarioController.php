@@ -61,15 +61,17 @@ class UsuarioController
             }
 
             $arrayUsuario['Foto'] = $NameArchivos;
+            $_SESSION["Correo"]=$arrayUsuario['Email'];
             var_dump($arrayUsuario);
+
+
             $Usuario = new Usuario($arrayUsuario);
             $Usuario->insertar();
             header("Location: ../Vista/BackEnd/Adminnoxadmin-12/horizontal/login.php?respuesta=correcto");
 
-        } catch (Exception $e) {
-
-            var_dump($e);
-            //header("Location: ../Vista/BackEnd/Adminnoxadmin-12/horizontal/registroUsuario.php?respuesta=error");
+        } catch ( Exception $exception) {
+            //var_dump($exception);
+            header("Location: ../Vista/BackEnd/Adminnoxadmin-12/horizontal/registroUsuario.php?respuesta=errorXUsuario&correo=".$_SESSION["Correo"]);
         }
     }
 
