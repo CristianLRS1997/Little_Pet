@@ -2,6 +2,8 @@
 require_once (__DIR__.'/../Modelo/Respuesta.php');
 
 require_once (__DIR__.'/../Modelo/Adopcion.php');
+require_once (__DIR__.'/../Modelo/Usuario.php');
+require_once (__DIR__.'/../Modelo/SujetoAdopcion.php');
 
 /**
  * Created by PhpStorm.
@@ -46,7 +48,7 @@ class respuestaController
             $arrresp = array();
             $arrresp['Enunciado']=$_POST['Enunciado'];
             $arrresp['Respuesta']=$_POST['Respuesta'];
-            $arrresp['Adopcion_IdAdopcion']= "1";
+            $arrresp['Adopcion_IdAdopcion']= "2";
             $resp = new Respuesta($arrresp);
              $resp->insertar();
            // var_dump($arrresp);
@@ -65,7 +67,7 @@ class respuestaController
             $arrresp = array();
             $arrresp['Enunciado']=$_POST['Enunciado'];
             $arrresp['Respuesta']=$_POST['Respuesta'];
-            $arrresp['Adopcion_IdAdopcion']= "1";
+            $arrresp['Adopcion_IdAdopcion']= "2";
             $resp = new Respuesta($arrresp);
             $resp->insertar();
             // var_dump($arrresp);
@@ -84,7 +86,7 @@ class respuestaController
             $arrresp = array();
             $arrresp['Enunciado']=$_POST['Enunciado'];
             $arrresp['Respuesta']=$_POST['Respuesta'];
-            $arrresp['Adopcion_IdAdopcion']= "1";
+            $arrresp['Adopcion_IdAdopcion']= "2";
             $resp = new Respuesta($arrresp);
             $resp->insertar();
             // var_dump($arrresp);
@@ -103,7 +105,7 @@ class respuestaController
             $arrresp = array();
             $arrresp['Enunciado']=$_POST['Enunciado'];
             $arrresp['Respuesta']=$_POST['Respuesta'];
-            $arrresp['Adopcion_IdAdopcion']= "1";
+            $arrresp['Adopcion_IdAdopcion']= "2";
             $resp = new Respuesta($arrresp);
             $resp->insertar();
             // var_dump($arrresp);
@@ -122,7 +124,7 @@ class respuestaController
             $arrresp = array();
             $arrresp['Enunciado']=$_POST['Enunciado'];
             $arrresp['Respuesta']=$_POST['Respuesta'];
-            $arrresp['Adopcion_IdAdopcion']= "1";
+            $arrresp['Adopcion_IdAdopcion']= "2";
             $resp = new Respuesta($arrresp);
             $resp->insertar();
             // var_dump($arrresp);
@@ -141,7 +143,7 @@ class respuestaController
             $arrresp = array();
             $arrresp['Enunciado']=$_POST['Enunciado'];
             $arrresp['Respuesta']=$_POST['Respuesta'];
-            $arrresp['Adopcion_IdAdopcion']= "1";
+            $arrresp['Adopcion_IdAdopcion']= "2";
             $resp = new Respuesta($arrresp);
             $resp->insertar();
             // var_dump($arrresp);
@@ -167,16 +169,16 @@ class respuestaController
 
         foreach ($arrpreguntas as $pre){
 
+              $adop = Adopcion::buscarForId($pre->getAdopcion());
+              $usuario = Usuario::buscarForId($adop->getPadrino());
+              $sujeto = SujetoAdopcion::buscarForId($adop->getSujetoAdopcion());
 
-            $htmlelemnt .= "<h5 class='text-warning'>".$pre->getEnunciado()."</h5>";
+            $htmlelemnt .= "<h5 class='text-warning'>"."Enunciado: ".$pre->getEnunciado()."</h5>";
 
-            $htmlelemnt.="<div class=\"checkbox checkbox-warning\">".
-                " <input id=\"checkbox2\" type=\"checkbox\" name='Respuesta' checked>".
-                "  <label for=\"checkbox2\">".
-                $pre->getRespuesta().
-                " </label>".
-                "</div>";
-            $htmlelemnt .= "<h5 class='text-warning'>".$pre->getAdopcion()."</h5>";
+            $htmlelemnt.="<h5 >"."Respuesta: ".$pre->getRespuesta()."</h5>";
+
+            $htmlelemnt .= "<h5 >"."Autor: ".$usuario->getNombres()."</h5>";
+            $htmlelemnt .= "<h5 >"."Mascota: ".$sujeto->getNombre()."</h5>";
 
 
 
