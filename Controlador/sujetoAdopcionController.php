@@ -16,8 +16,12 @@ class sujetoAdopcionController
     static function main($action){
         if ($action == "crear"){
             sujetoAdopcionController::crear();
-        }else if ($action == "editar"){
-            sujetoAdopcionController::editar();
+        }else if ($action == "adminTableSujeto"){
+            sujetoAdopcionController::adminTableSujeto();
+        }else if ($action == "InactivarSujeto"){
+            sujetoAdopcionController::CambiarEstado("Inactivo");
+        }else if ($action == "ActivarSujeto"){
+            sujetoAdopcionController::CambiarEstado("Activo");
         }
     }
 
@@ -66,6 +70,61 @@ class sujetoAdopcionController
         }
     }
 
+
+    static  public function adminTableSujeto()
+    {
+
+        $arrSujetoAdopcion = SujetoAdopcion::getAll(); /*  */
+        $tmpSujetoAdopcion = new SujetoAdopcion();
+        $arrColumnas = [/*"IdSujetoAdopcion",*/"Genero","Anos","Meses","Nombre","Tamano","Esterilizado","Vacunas","Descripcion","Dueno","Raza","Ciudad","Alimentacion","Foto","Estado"];
+        $htmlTable = "<thead>";
+        $htmlTable .= "<tr>";
+        foreach ($arrColumnas as $NameColumna){
+            $htmlTable .= "<th>".$NameColumna."</th>";
+        }
+        $htmlTable .= "<th>Acciones</th>";
+        $htmlTable .= "</tr>";
+        $htmlTable .= "</thead>";
+
+        $htmlTable .= "<tbody>";
+        foreach ($arrSujetoAdopcion as $ObjSujetoAdopcion){
+            $htmlTable .= "<tr>";
+            // $htmlTable .= "<td>".$ObjSujetoAdopcion->getIdSujetoAdopcion()."</td>";
+            $htmlTable .= "<td>".$ObjSujetoAdopcion->getGenero()."</td>";
+            $htmlTable .= "<td>".$ObjSujetoAdopcion->getAnos()."</td>";
+            $htmlTable .= "<td>".$ObjSujetoAdopcion->getMeses()."</td>";
+            $htmlTable .= "<td>".$ObjSujetoAdopcion->getNombre()."</td>";
+            $htmlTable .= "<td>".$ObjSujetoAdopcion->getTamano()."</td>";
+            $htmlTable .= "<td>".$ObjSujetoAdopcion->getEsterilizado()."</td>";
+            $htmlTable .= "<td>".$ObjSujetoAdopcion->getVacunas()."</td>";
+            $htmlTable .= "<td>".$ObjSujetoAdopcion->getDescripcion()."</td>";
+            $htmlTable .= "<td>".$ObjSujetoAdopcion->getDueno()."</td>";
+            $htmlTable .= "<td>".$ObjSujetoAdopcion->getRaza()."</td>";
+            $htmlTable .= "<td>".$ObjSujetoAdopcion->getCiudad()."</td>";
+            $htmlTable .= "<td>".$ObjSujetoAdopcion->getAlimentacion()."</td>";
+            $htmlTable .= "<td>".$ObjSujetoAdopcion->getFoto()."</td>";
+            $htmlTable .= "<td>".$ObjSujetoAdopcion->getEstado()."</td>";
+
+            $icons = "";
+            if($ObjSujetoAdopcion->getEstado() == "Activo"){
+                $icons .= "<a data-toggle='tooltip' title='Inactivar Usuario' data-placement='top' class='btn btn-social-icon btn-danger newTooltip' href='../../Controlador/sujetoAdopcionController.php?action=InactivarSujeto&IdSujetoAdopcion=".$ObjSujetoAdopcion->getIdSujetoAdopcion()."'><i class='fa fa-times'></i></a>";
+            }else{
+                $icons .= "<a data-toggle='tooltip' title='Activar Usuario' data-placement='top' class='btn btn-social-icon btn-success newTooltip' href='../../Controlador/sujetoAdopcionController.php?action=ActivarSujeto&IdSujetoAdopcion=".$ObjSujetoAdopcion->getIdSujetoAdopcion()."'><i class='fa fa-check'></i></a>";
+            }
+            $icons .= "<a data-toggle='tooltip' title='Actualizar Usuario' data-placement='top' class='btn btn-social-icon btn-primary newTooltip' href='actualizarEspecialista.php?IdEspecialista=".$ObjSujetoAdopcion->getIdSujetoAdopcion()."'><i class='fa fa-pencil'></i></a>";
+            $icons .= "<a data-toggle='tooltip' title='Ver Usuario' data-placement='top' class='btn btn-social-icon btn-warning newTooltip' href='../../Controlador/especialistaController.php?action=InactivarPaciente&Especialista=".$ObjSujetoAdopcion->getIdSujetoAdopcion()."'><i class='fa fa-eye'></i></a>";
+            $htmlTable .= "<td>".$icons."</td>";
+
+            $htmlTable .= "</tr>";
+        }
+        $htmlTable .= "</tbody>";
+
+
+
+
+        return $htmlTable;
+    }
+
     static public function adminTableUsuario()
     {
         $arrUsuario = SujetoAdopcion::getAll(); /*  */
@@ -107,5 +166,19 @@ class sujetoAdopcionController
         }
         $htmlTable .= "</tbody>";
         return $htmlTable;
-}
+    }
+
+
+    static public function CambiarEstado ($Estado){
+        try {
+            $IdSujetoAdopcion = $_GET["IdSujetoAdopcion"];
+            $ObjSujetoAdopcion = SujetoAdopcion::buscarForId($IdSujetoAdopcion);
+            $ObjSujetoAdopcion->setEstado($Estado);
+            $ObjSujetoAdopcion->editar();
+            header("Location: ../Vista/BackEnd/Adminnoaxadmin-12/horizontal/adminSujetos.php?respuesta=correcto");
+        }catch (Exception $e){
+            $txtMensaje = $e->getMessage();
+            header("Location: ../Vista/BackEnd/Adminnoaxadmin-12/horizontal/adminSujetos.php?respuesta=error&Mensaje=".$txtMensaje);
+        }
+    }
 }

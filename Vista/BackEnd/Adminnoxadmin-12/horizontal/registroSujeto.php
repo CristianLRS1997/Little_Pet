@@ -38,7 +38,13 @@ header("Location: login.php");
 <header id="topnav">
 
     <?php include("Pages/Includes/Menu-Header.php"); ?>
+    <script >
+        function cargar() {
+            alert("Hola");
+        }
 
+
+    </script>
 
 </header>
 
@@ -71,7 +77,7 @@ header("Location: login.php");
                             <div class="col-xs-9" style="width: 83%" >
 
                                 <label>
-                                    <input type="radio" name="Especie" value="op" checked />
+                                    <input onclick="cargar()" type="radio" name="Especie" value="op" checked />
                                     <img class="icon-colored" src="assets/images/icons/Perro.svg" title="Perros"/>
                                 </label>
 

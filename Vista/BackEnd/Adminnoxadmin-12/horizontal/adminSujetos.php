@@ -24,6 +24,7 @@ $_SESSION["user"]=$_SESSION["DataUser"]["IdUsuario"];
 
 
     <?php include("Pages/Includes/Imports.php"); ?>
+    <?php include_once("../../../../Controlador/sujetoAdopcionController.php"); ?>
 
 
 
@@ -55,6 +56,10 @@ $_SESSION["user"]=$_SESSION["DataUser"]["IdUsuario"];
             </div>
 
             <br>
+
+            <table id="datatable" class="table table-striped table-bordered">
+                <?php echo sujetoAdopcionController::adminTableSujeto(); ?>
+            </table>
 
             <br>
 

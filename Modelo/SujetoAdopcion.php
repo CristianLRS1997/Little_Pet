@@ -395,7 +395,7 @@ class SujetoAdopcion extends db_abstract_class
 
     public function editar()
     {
-        // TODO: Implement editar() method.
+
     }
 
     protected function eliminar($id)

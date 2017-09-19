@@ -9,7 +9,9 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
+      <introspection-schemas>*:littlepet</introspection-schemas>
       <resolve-scope>littlepet:</resolve-scope>
+      <unqualified-resolve-schemas>littlepet:</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>
