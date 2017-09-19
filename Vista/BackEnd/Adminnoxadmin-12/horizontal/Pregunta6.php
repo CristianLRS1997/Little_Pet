@@ -47,7 +47,7 @@ require "../../../../Controlador/respuestaController.php";
         <div class="row">
             <div class="col-sm-9 center-page">
                 <div class="card-box">
-                    <h1 class="text-center text-warning">PREGUNTAS</h1>
+                    <h2 class="text-center text-warning">PREGUNTAS</h2>
                     <p class="font-15 m-b-20" align="justify"">
                     Estas son las preguntas que debes responder para el proceso de adopcion.
                     </p>
@@ -106,9 +106,3 @@ require "../../../../Controlador/respuestaController.php";
 
 </body>
 </html>
-
-* Created by PhpStorm.
-* User: usuario
-* Date: 19/09/2017
-* Time: 12:45 AM
-*/

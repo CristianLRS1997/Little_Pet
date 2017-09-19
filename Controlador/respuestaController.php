@@ -168,7 +168,7 @@ class respuestaController
         foreach ($arrpreguntas as $pre){
 
 
-            $htmlelemnt .= "<h3 class='text-warning'>".$pre->getEnunciado()."</h3>";
+            $htmlelemnt .= "<h5 class='text-warning'>".$pre->getEnunciado()."</h5>";
 
             $htmlelemnt.="<div class=\"checkbox checkbox-warning\">".
                 " <input id=\"checkbox2\" type=\"checkbox\" name='Respuesta' checked>".
@@ -176,6 +176,8 @@ class respuestaController
                 $pre->getRespuesta().
                 " </label>".
                 "</div>";
+            $htmlelemnt .= "<h5 class='text-warning'>".$pre->getAdopcion()."</h5>";
+
 
 
         }
