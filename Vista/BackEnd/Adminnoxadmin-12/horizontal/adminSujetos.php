@@ -57,16 +57,16 @@ $_SESSION["user"]=$_SESSION["DataUser"]["IdUsuario"];
 
             <br>
 
-            <table id="datatable" class="table table-striped table-bordered">
-                <?php echo sujetoAdopcionController::adminTableSujeto(); ?>
-            </table>
-
             <br>
 
         </div>
 
 
         <h2 style="color: #F77C10">MIS HUELLITAS EN ADOPCIÓN</h2>
+
+        <table id="datatable" class="table table-striped table-bordered">
+            <?php echo sujetoAdopcionController::adminTableSujeto(); ?>
+        </table>
 
     </div> <!-- end container -->
 </div>
